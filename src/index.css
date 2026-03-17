@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 12% 4%;
+    --foreground: 42 30% 92%;
+
+    --card: 230 18% 12%;
+    --card-foreground: 42 30% 92%;
+
+    --popover: 230 20% 8%;
+    --popover-foreground: 42 30% 92%;
+
+    --primary: 42 90% 50%;
+    --primary-foreground: 230 20% 8%;
+
+    --secondary: 42 20% 18%;
+    --secondary-foreground: 42 30% 92%;
+
+    --muted: 230 15% 16%;
+    --muted-foreground: 42 20% 60%;
+
+    --accent: 42 85% 55%;
+    --accent-foreground: 230 20% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 230 15% 20%;
+    --input: 230 15% 20%;
+    --ring: 42 90% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 230 18% 10%;
+    --sidebar-foreground: 42 30% 92%;
+    --sidebar-primary: 42 90% 50%;
+    --sidebar-primary-foreground: 230 20% 8%;
+    --sidebar-accent: 42 20% 18%;
+    --sidebar-accent-foreground: 42 30% 92%;
+    --sidebar-border: 230 15% 20%;
+    --sidebar-ring: 42 90% 50%;
+
+    /* Custom tokens */
+    --gold: 42 90% 50%;
+    --gold-light: 42 50% 92%;
+    --gold-dark: 42 80% 30%;
+    --teal: 42 85% 55%;
+    --teal-light: 42 40% 94%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .islamic-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .arabic-text {
+    @apply font-arabic text-2xl leading-relaxed;
+    direction: rtl;
+  }
+
+  .phonetic-text {
+    @apply font-body italic text-muted-foreground;
+  }
+
+  .section-card {
+    @apply bg-card rounded-xl border border-border p-6 transition-all duration-300 hover:shadow-lg hover:border-primary/30;
+  }
+
+  .nav-link {
+    @apply relative inline-block text-foreground/80 hover:text-primary transition-colors duration-200;
+  }
+
+  .nav-link.active {
+    @apply text-primary font-semibold;
+  }
+
+  .btn-primary-warm {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .btn-gold {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .btn-glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+      0 4px 24px 0 rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.12),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.04);
+    transition: all 0.3s ease;
+  }
+
+  .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 
+      0 8px 32px 0 rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.18),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.06);
+    transform: translateY(-1px);
+  }
+}
+
+/* Prayer animation keyframes */
+@keyframes prayer-standing {
+  0%, 100% { transform: scaleY(1); }
+}
+
+@keyframes prayer-bowing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(45deg); }
+}
+
+@keyframes prayer-prostrating {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(90deg); }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+}
