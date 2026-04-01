@@ -61,6 +61,9 @@ export function getStepAudioType(stepName: string): PrayerAudioType {
   if (lower.includes("assise entre")) {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.jalsah };
   }
+  if (lower.includes("tashahhud final")) {
+    return { kind: "recorded", file: PRAYER_AUDIO_FILES.tashahud2 };
+  }
   if (lower.includes("tashahhud")) {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.tashahud };
   }
