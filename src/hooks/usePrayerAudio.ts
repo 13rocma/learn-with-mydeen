@@ -14,6 +14,7 @@ const PRAYER_AUDIO_FILES: Record<string, string> = {
   sajdah: "/audio/sajdah.mp3",
   jalsah: "/audio/jalsah.mp3",
   tashahud: "/audio/tashahud.mp3",
+  tashahud2: "/audio/tashahud2.mp3",
   salam: "/audio/salam.mp3",
   darud: "/audio/darud.mp3",
 };
@@ -59,6 +60,9 @@ export function getStepAudioType(stepName: string): PrayerAudioType {
   }
   if (lower.includes("assise entre")) {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.jalsah };
+  }
+  if (lower.includes("tashahhud final")) {
+    return { kind: "recorded", file: PRAYER_AUDIO_FILES.tashahud2 };
   }
   if (lower.includes("tashahhud")) {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.tashahud };
