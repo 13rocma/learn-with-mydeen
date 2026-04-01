@@ -53,8 +53,8 @@ const PrayerGuide = () => {
 
   const togglePlay = () => {
     if (currentStep >= steps.length - 1 && !isPlaying) {
-      setCurrentStep(0);
-      setIsPlaying(true);
+      // Prayer is finished, don't restart automatically
+      return;
     } else if (isPlaying) {
       setIsPlaying(false);
       pauseAudio();

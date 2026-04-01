@@ -2,7 +2,7 @@ import { useRef, useCallback, useEffect, useState } from "react";
 
 const AUDIO_BASE = "https://api.quran.com/api/v4";
 const VERSE_CDN = "https://verses.quran.com/";
-const DEFAULT_RECITER = 5; // Abu Bakr al-Shatri
+const DEFAULT_RECITER = 7; // Mishary Rashid Alafasy
 
 const audioCache = new Map<string, string[]>();
 
