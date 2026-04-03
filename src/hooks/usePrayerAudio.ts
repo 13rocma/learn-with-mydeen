@@ -71,6 +71,9 @@ export function getStepAudioType(stepName: string): PrayerAudioType {
   if (lower.includes("salut final") || lower.includes("taslîm")) {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.salam };
   }
+  if (lower.includes("iqama") || lower.includes("appel")) {
+    return { kind: "recorded", file: PRAYER_AUDIO_FILES.iqama };
+  }
 
   return { kind: "none" };
 }
