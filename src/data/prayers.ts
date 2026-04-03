@@ -105,9 +105,9 @@ export const rakaaSteps: PrayerAnimStep[] = [
   {
     id: 9,
     name: "Assise entre les deux prosternations",
-    arabic: "رَبِّ ٱغۡفِرۡ لِى",
-    phonetic: "Rabbi ghfir lî",
-    translation: "Seigneur, pardonne-moi",
+    arabic: "ٱللَّهُ أَكْبَرُ",
+    phonetic: "Allâhou Akbar",
+    translation: "Allah est le Plus Grand",
     description: "Asseyez-vous brièvement sur les talons.",
     position: "sitting",
     durationMs: 4000,
