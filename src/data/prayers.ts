@@ -178,6 +178,17 @@ export const salamStep: PrayerAnimStep = {
   durationMs: 6000,
 };
 
+export const iqamaStep: PrayerAnimStep = {
+  id: 200,
+  name: "Iqama (Appel à la prière)",
+  arabic: "ٱللَّهُ أَكْبَرُ ٱللَّهُ أَكْبَرُ، أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّهُ، أَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ ٱللَّهِ، حَيَّ عَلَى ٱلصَّلَاةِ، حَيَّ عَلَى ٱلْفَلَاحِ، قَدْ قَامَتِ ٱلصَّلَاةُ قَدْ قَامَتِ ٱلصَّلَاةُ، ٱللَّهُ أَكْبَرُ ٱللَّهُ أَكْبَرُ، لَا إِلَٰهَ إِلَّا ٱللَّهُ",
+  phonetic: "Allâhou Akbar, Allâhou Akbar. Ash-hadou an lâ ilâha illa llâh. Ash-hadou anna Muhammadan rasoulou llâh. Hayya 'ala s-salâh. Hayya 'ala l-falâh. Qad qâmati s-salâh, qad qâmati s-salâh. Allâhou Akbar, Allâhou Akbar. Lâ ilâha illa llâh.",
+  translation: "Allah est le Plus Grand. J'atteste qu'il n'y a de divinité qu'Allah. J'atteste que Muhammad est le messager d'Allah. Venez à la prière. Venez au succès. La prière est établie. Allah est le Plus Grand. Il n'y a de divinité qu'Allah.",
+  description: "L'Iqama est le second appel à la prière, prononcé juste avant de commencer. Tenez-vous debout face à la Qibla.",
+  position: "standing",
+  durationMs: 15000,
+};
+
 /**
  * Build the full prayer sequence based on raka count.
  * Tashahhud after 2nd raka and last raka. Salam at the end.
