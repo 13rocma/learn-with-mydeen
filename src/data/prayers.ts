@@ -114,6 +114,16 @@ export const rakaaSteps: PrayerAnimStep[] = [
   },
   {
     id: 10,
+    name: "Takbir — 2ème Sujûd",
+    arabic: "ٱللَّهُ أَكْبَرُ",
+    phonetic: "Allâhou Akbar",
+    translation: "Allah est le Plus Grand",
+    description: "Dites Allahu Akbar en vous prosternant pour la deuxième prosternation.",
+    position: "prostrating",
+    durationMs: 2000,
+  },
+  {
+    id: 11,
     name: "2ème Prosternation",
     arabic: "سُبۡحَـٰنَ رَبِّىَ ٱلۡأَعۡلَىٰ",
     phonetic: "Subhâna Rabbiya l-A'lâ",
