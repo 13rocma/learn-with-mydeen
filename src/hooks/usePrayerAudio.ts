@@ -17,6 +17,7 @@ const PRAYER_AUDIO_FILES: Record<string, string> = {
   tashahud2: "/audio/tashahud2.mp3",
   salam: "/audio/salam.mp3",
   darud: "/audio/darud.mp3",
+  iqama: "/audio/iqama.mp3",
 };
 
 async function fetchChapterAudioUrls(chapter: number, reciterId = DEFAULT_RECITER): Promise<string[]> {
