@@ -60,7 +60,7 @@ export function getStepAudioType(stepName: string): PrayerAudioType {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.sajdah };
   }
   if (lower.includes("assise entre")) {
-    return { kind: "recorded", file: PRAYER_AUDIO_FILES.jalsah };
+    return { kind: "recorded", file: PRAYER_AUDIO_FILES.takbir };
   }
   if (lower.includes("tashahhud final")) {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.tashahud2 };
