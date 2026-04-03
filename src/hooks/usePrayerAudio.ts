@@ -56,11 +56,11 @@ export function getStepAudioType(stepName: string): PrayerAudioType {
   if (lower.includes("redressement")) {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.qawmah };
   }
-  if (lower.includes("prosternation") || lower.includes("sujûd")) {
-    return { kind: "recorded", file: PRAYER_AUDIO_FILES.sajdah };
-  }
   if (lower.includes("assise entre")) {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.takbir };
+  }
+  if (lower.includes("prosternation") || lower.includes("sujûd")) {
+    return { kind: "recorded", file: PRAYER_AUDIO_FILES.sajdah };
   }
   if (lower.includes("tashahhud final")) {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.tashahud2 };
