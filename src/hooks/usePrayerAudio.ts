@@ -17,6 +17,7 @@ const PRAYER_AUDIO_FILES: Record<string, string> = {
   tashahud2: "/audio/tashahud2.mp3",
   salam: "/audio/salam.mp3",
   darud: "/audio/darud.mp3",
+  iqama: "/audio/iqama.mp3",
 };
 
 async function fetchChapterAudioUrls(chapter: number, reciterId = DEFAULT_RECITER): Promise<string[]> {
@@ -69,6 +70,9 @@ export function getStepAudioType(stepName: string): PrayerAudioType {
   }
   if (lower.includes("salut final") || lower.includes("taslîm")) {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.salam };
+  }
+  if (lower.includes("iqama") || lower.includes("appel")) {
+    return { kind: "recorded", file: PRAYER_AUDIO_FILES.iqama };
   }
 
   return { kind: "none" };
