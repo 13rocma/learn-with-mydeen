@@ -149,7 +149,7 @@ export const tashahhudStep: PrayerAnimStep = {
   id: 100,
   name: "Tashahhud",
   arabic: "ٱلتَّحِيَّـٰتُ لِلَّهِ وَٱلصَّلَوَٰتُ وَٱلطَّيِّبَـٰتُ، ٱلسَّلَـٰمُ عَلَيۡكَ أَيُّهَا ٱلنَّبِيُّ وَرَحۡمَةُ ٱللَّهِ وَبَرَكَـٰتُهُ، ٱلسَّلَـٰمُ عَلَيۡنَا وَعَلَىٰ عِبَادِ ٱللَّهِ ٱلصَّـٰلِحِينَ، أَشۡهَدُ أَن لَّا إِلَـٰهَ إِلَّا ٱللَّهُ وَأَشۡهَدُ أَنَّ مُحَمَّدًا عَبۡدُهُ وَرَسُولُهُ",
-  phonetic: "At-tahiyyâtou lillâhi wa s-salawâtou wa t-tayyibât. As-salâmou 'alayka ayyouha n-nabiyyou wa rahmatou llâhi wa barakâtouh. As-salâmou 'alaynâ wa 'alâ 'ibâdi llâhi s-sâlihîn. Ash-hadou an lâ ilâha illa llâh, wa ash-hadou anna Muhammadan 'abdouhou wa rasoulouh.",
+  phonetic: "At-Tahiyyatou Lillah Az-zakiyatou Lillah At-Tayyibatou Salawatou Lillah Assalamu 'alayka Ayyouha An-Nabiyyi Wa rahmatou Allahi Wa barakatouh As-Salamou 'Alayna wa 'ala 'ibadi Allahi As-Salihine Ach-Hadou Allah ilaha Illa Allah Wa Ach-Hadou Anna Mouhammadane 'Abdouhou wa Rassoulouh.",
   translation: "Les salutations sont pour Allah, ainsi que les prières et les bonnes œuvres. Que la paix soit sur toi, ô Prophète, ainsi que la miséricorde d'Allah et Ses bénédictions. Que la paix soit sur nous et sur les pieux serviteurs d'Allah. J'atteste qu'il n'y a de divinité qu'Allah et j'atteste que Muhammad est Son serviteur et Son messager.",
   description: "Assis, index droit levé, récitez le Tashahhud.",
   position: "sitting-tashahhud",
