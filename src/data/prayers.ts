@@ -197,6 +197,9 @@ export function buildPrayerSequence(rakaCount: number): PrayerAnimStep[] {
   const steps: PrayerAnimStep[] = [];
   let stepId = 1;
 
+  // Iqama before prayer
+  steps.push({ ...iqamaStep, id: stepId++ });
+
   for (let raka = 1; raka <= rakaCount; raka++) {
     const rakaSteps = rakaaSteps;
 
