@@ -303,14 +303,22 @@ const PrayerGuide = () => {
                 <h3 className="font-heading text-lg font-semibold mb-1">{step.name}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{step.description}</p>
               </div>
-              <div className="bg-muted/50 rounded-lg p-5">
-                <p className="phonetic-text text-center text-lg font-bold mb-3">{step.phonetic}</p>
-                <p className="arabic-text text-center text-foreground/50 text-xl mb-2">{step.arabic}</p>
-                <p className="text-center text-sm text-muted-foreground">{step.translation}</p>
-                {step.repeat && (
-                  <p className="text-center text-xs text-primary mt-2 font-medium">× {step.repeat} fois</p>
-                )}
-              </div>
+              {(step.arabic || step.phonetic || step.translation) && (
+                <div className="bg-muted/50 rounded-lg p-5 space-y-3">
+                  {step.arabic && (
+                    <p className="arabic-text text-center text-xl leading-loose">{step.arabic}</p>
+                  )}
+                  {step.phonetic && (
+                    <p className="phonetic-text text-center text-base font-semibold">{step.phonetic}</p>
+                  )}
+                  {step.translation && (
+                    <p className="text-center text-sm text-muted-foreground">{step.translation}</p>
+                  )}
+                  {step.repeat && (
+                    <p className="text-center text-xs text-primary font-medium">× {step.repeat} fois</p>
+                  )}
+                </div>
+              )}
             </div>
 
             <div className="flex items-center justify-center gap-4 mt-6">
