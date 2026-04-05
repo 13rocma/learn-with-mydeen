@@ -207,16 +207,8 @@ const PrayerGuide = () => {
   if (view === "menu" || !selectedPrayer) {
     return (
       <div className="min-h-screen">
-        <PageHeroBanner />
+        <PageHeroBanner title="Guide de la Prière" subtitle="Choisissez la prière que vous souhaitez apprendre" />
         <div className="container mx-auto px-4 max-w-3xl py-6">
-          <div className="text-center mb-6">
-            <h1 className="font-heading text-3xl md:text-4xl font-bold mb-3">
-              Guide de la Prière
-            </h1>
-            <p className="text-muted-foreground">
-              Choisissez la prière que vous souhaitez apprendre
-            </p>
-          </div>
 
           {/* Ablutions button */}
           <button

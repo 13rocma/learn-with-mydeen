@@ -9,16 +9,8 @@ const DuasPage = () => {
 
   return (
     <div className="min-h-screen">
-      <PageHeroBanner />
+      <PageHeroBanner title="Invocations (Du'as)" subtitle="Les invocations essentielles pour votre quotidien" />
       <div className="container mx-auto px-4 max-w-3xl py-6">
-        <div className="text-center mb-6">
-          <h1 className="font-heading text-3xl md:text-4xl font-bold mb-3">
-            Invocations (Du'as)
-          </h1>
-          <p className="text-muted-foreground">
-            Les invocations essentielles pour votre quotidien
-          </p>
-        </div>
 
         {/* Category tabs */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">

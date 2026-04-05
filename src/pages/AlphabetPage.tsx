@@ -25,16 +25,8 @@ const AlphabetPage = () => {
 
   return (
     <div className="min-h-screen">
-      <PageHeroBanner />
+      <PageHeroBanner title="Alphabet Arabe" subtitle="Apprenez à reconnaître et prononcer les 28 lettres — cliquez pour écouter" />
       <div className="container mx-auto px-4 max-w-4xl py-6">
-        <div className="text-center mb-6">
-          <h1 className="font-heading text-3xl md:text-4xl font-bold mb-3">
-            Alphabet Arabe
-          </h1>
-          <p className="text-muted-foreground">
-            Apprenez à reconnaître et prononcer les 28 lettres — cliquez pour écouter
-          </p>
-        </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {arabicAlphabet.map((item) => {
