@@ -82,7 +82,7 @@ const PrayerGuide = () => {
   if (view === "ablutions") {
     return (
       <div className="min-h-screen bg-background">
-        <PageHeroBanner />
+        <PageHeroBanner title="Les Ablutions" subtitle="Apprenez les étapes de la purification" />
         <section className="py-10 border-b border-border">
           <div className="container mx-auto px-4">
             <button
