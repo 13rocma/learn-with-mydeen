@@ -34,14 +34,6 @@ export const duas: Dua[] = [
     category: "Invocations quotidiennes",
   },
   {
-    id: 3,
-    title: "Avant de dormir",
-    arabic: "بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",
-    phonetic: "Bismika Allâhoumma amoûtou wa ahyâ",
-    translation: "En Ton nom, ô Allah, je meurs et je vis",
-    category: "Invocations quotidiennes",
-  },
-  {
     id: 4,
     title: "Au réveil",
     arabic: "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
@@ -71,14 +63,6 @@ export const duas: Dua[] = [
     arabic: "الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",
     phonetic: "Al-hamdou lillâhi lladhî kasânî hâdhâ wa razaqanîhi min ghayri hawlin minnî wa lâ qouwwah",
     translation: "Louange à Allah qui m'a vêtu de ceci et me l'a accordé sans effort ni force de ma part",
-    category: "Invocations quotidiennes",
-  },
-  {
-    id: 8,
-    title: "En se regardant dans le miroir",
-    arabic: "اللَّهُمَّ كَمَا حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",
-    phonetic: "Allâhoumma kamâ hassanta khalqî fa hassin khoulouqî",
-    translation: "Ô Allah, comme Tu as embelli ma création, embellis mon caractère",
     category: "Invocations quotidiennes",
   },
   {
@@ -129,14 +113,6 @@ export const duas: Dua[] = [
     translation: "Louange à Allah",
     category: "Invocations quotidiennes",
   },
-  {
-    id: 15,
-    title: "En montant un moyen de transport",
-    arabic: "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ",
-    phonetic: "Soubhâna lladhî sakhkhara lanâ hâdhâ wa mâ kounnâ lahou mouqrinîn wa innâ ilâ rabbinâ lamounqaliboûn",
-    translation: "Gloire à Celui qui a mis ceci à notre service alors que nous n'étions pas capables de le dominer, et c'est vers notre Seigneur que nous retournerons",
-    category: "Invocations quotidiennes",
-  },
 
   // ── Prière ──
   {
@@ -161,14 +137,6 @@ export const duas: Dua[] = [
     arabic: "أَسْتَغْفِرُ اللَّهَ",
     phonetic: "Astaghfirou llâh",
     translation: "Je demande pardon à Allah",
-    category: "Invocations de la prière",
-  },
-  {
-    id: 19,
-    title: "Après le taslîm",
-    arabic: "اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ",
-    phonetic: "Allâhoumma anta s-salâmou wa minka s-salâm, tabârakta yâ dhâ l-jalâli wa l-ikrâm",
-    translation: "Ô Allah, Tu es la Paix et de Toi vient la paix, béni sois-Tu, ô Détenteur de la majesté et de la générosité",
     category: "Invocations de la prière",
   },
   {
@@ -203,30 +171,6 @@ export const duas: Dua[] = [
     translation: "Il n'y a de divinité qu'Allah, Seul sans associé. À Lui la royauté, à Lui la louange, et Il est capable de toute chose",
     category: "Invocations de la prière",
   },
-  {
-    id: 24,
-    title: "Âyat al-Kursî après la prière",
-    arabic: "اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
-    phonetic: "Allâhou lâ ilâha illâ houwa l-Hayyou l-Qayyoûm",
-    translation: "Allah, point de divinité à part Lui, le Vivant, Celui qui subsiste par Lui-même",
-    category: "Invocations de la prière",
-  },
-  {
-    id: 25,
-    title: "Entre les deux prosternations",
-    arabic: "رَبِّ اغْفِرْ لِي رَبِّ اغْفِرْ لِي",
-    phonetic: "Rabbi ghfir lî, Rabbi ghfir lî",
-    translation: "Seigneur, pardonne-moi, Seigneur, pardonne-moi",
-    category: "Invocations de la prière",
-  },
-  {
-    id: 26,
-    title: "Invocation du qunût",
-    arabic: "اللَّهُمَّ اهْدِنِي فِيمَنْ هَدَيْتَ وَعَافِنِي فِيمَنْ عَافَيْتَ وَتَوَلَّنِي فِيمَنْ تَوَلَّيْتَ",
-    phonetic: "Allâhoumma hdinî fîman hadayt, wa 'âfinî fîman 'âfayt, wa tawallanî fîman tawallayt",
-    translation: "Ô Allah, guide-moi parmi ceux que Tu as guidés, accorde-moi le salut parmi ceux à qui Tu l'as accordé, prends-moi en charge parmi ceux que Tu as pris en charge",
-    category: "Invocations de la prière",
-  },
 
   // ── Protection ──
   {
@@ -251,14 +195,6 @@ export const duas: Dua[] = [
     arabic: "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
     phonetic: "Bismillâhi lladhî lâ yadourrou ma'a smihi shay'oun fi l-ardi wa lâ fi s-samâ'i wa houwa s-samî'ou l-'alîm",
     translation: "Au nom d'Allah, avec le nom duquel rien sur terre ni au ciel ne peut nuire, et Il est l'Audient, l'Omniscient",
-    category: "Invocations de protection",
-  },
-  {
-    id: 30,
-    title: "Sayyid al-Istighfâr",
-    arabic: "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
-    phonetic: "Allâhoumma anta rabbî lâ ilâha illâ ant, khalaqtanî wa anâ 'abdouk, wa anâ 'alâ 'ahdika wa wa'dika mâ stata't, a'oûdhou bika min sharri mâ sana't, aboû'ou laka bini'matika 'alayya wa aboû'ou bidhanbî, faghfir lî fa innahou lâ yaghfirou dh-dhounoûba illâ ant",
-    translation: "Ô Allah, Tu es mon Seigneur, il n'y a de divinité que Toi. Tu m'as créé et je suis Ton serviteur, je m'en tiens à Ton pacte et à Ta promesse autant que je le peux. Je cherche refuge auprès de Toi contre le mal que j'ai commis. Je reconnais Tes bienfaits sur moi et je reconnais mon péché, pardonne-moi car nul ne pardonne les péchés si ce n'est Toi",
     category: "Invocations de protection",
   },
   {
@@ -423,14 +359,6 @@ export const duas: Dua[] = [
     arabic: "يَرْحَمُكَ اللَّهُ",
     phonetic: "Yarhamouka llâh",
     translation: "Qu'Allah te fasse miséricorde",
-    category: "Invocations diverses",
-  },
-  {
-    id: 51,
-    title: "Réponse du premier",
-    arabic: "يَهْدِيكُمُ اللَّهُ وَيُصْلِحُ بَالَكُمْ",
-    phonetic: "Yahdîkoumou llâhou wa youslihou bâlakoum",
-    translation: "Qu'Allah vous guide et améliore votre situation",
     category: "Invocations diverses",
   },
   {
