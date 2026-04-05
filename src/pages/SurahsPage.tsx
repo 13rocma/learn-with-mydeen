@@ -26,16 +26,8 @@ const SurahsPage = () => {
 
   return (
     <div className="min-h-screen">
-      <PageHeroBanner />
+      <PageHeroBanner title="Sourates en Phonétique" subtitle="La phonétique en premier pour faciliter la mémorisation" />
       <div className="container mx-auto px-4 max-w-3xl py-6">
-        <div className="text-center mb-6">
-          <h1 className="font-heading text-3xl md:text-4xl font-bold mb-3">
-            Sourates en Phonétique
-          </h1>
-          <p className="text-muted-foreground">
-            La phonétique en premier pour faciliter la mémorisation
-          </p>
-        </div>
 
         {/* Sélecteur de récitateur */}
         <div className="mb-6 flex items-center justify-center gap-3">
