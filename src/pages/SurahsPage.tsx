@@ -5,7 +5,7 @@ import { ChevronDown, ChevronUp, Volume2, Play, Square, Pause, Loader2 } from "l
 import PageHeroBanner from "@/components/PageHeroBanner";
 
 const SurahsPage = () => {
-  const [openSurah, setOpenSurah] = useState<number | null>(0);
+  const [openSurah, setOpenSurah] = useState<number | null>(null);
   const [showDetails, setShowDetails] = useState<Record<number, boolean>>({});
   const {
     reciterId,
