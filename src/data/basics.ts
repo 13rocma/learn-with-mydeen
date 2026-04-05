@@ -142,13 +142,6 @@ export const basicsQuestions: BasicQuestion[] = [
 
   // Questions supplémentaires — Les fondements
   {
-    id: 18,
-    category: "Les fondements",
-    question: "Qu'est-ce que le Tawhid ?",
-    answer:
-      "Le Tawhid est le principe fondamental de l'Islam : l'unicité absolue d'Allah. Il se divise en trois catégories :\n\n1. Tawhid ar-Rubûbiyya — Allah est le seul Créateur et Maître de l'univers\n2. Tawhid al-Ulûhiyya — Allah est le seul digne d'adoration\n3. Tawhid al-Asmâ' wa as-Sifât — Allah possède des noms et attributs parfaits qui Lui sont propres",
-  },
-  {
     id: 19,
     category: "Les fondements",
     question: "Qu'est-ce que le Shirk ?",
@@ -205,13 +198,6 @@ export const basicsQuestions: BasicQuestion[] = [
     question: "Qui est dispensé du jeûne du Ramadan ?",
     answer:
       "Sont dispensés du jeûne :\n\n• Les enfants avant la puberté\n• Les malades (temporairement ou définitivement)\n• Les voyageurs (ils rattrapent plus tard)\n• Les femmes enceintes, allaitantes ou en période de menstrues\n• Les personnes âgées incapables de jeûner (elles compensent en nourrissant un pauvre par jour manqué)",
-  },
-  {
-    id: 27,
-    category: "Les piliers de l'Islam",
-    question: "Quels sont les rites du Hajj ?",
-    answer:
-      "Les principaux rites du Hajj sont :\n\n1. L'Ihrâm — l'entrée en état de sacralisation\n2. Le Tawâf — 7 tours autour de la Ka'ba\n3. Le Sa'y — 7 allers-retours entre Safâ et Marwa\n4. La station à 'Arafat — le pilier essentiel du Hajj\n5. La nuit à Muzdalifa\n6. La lapidation des stèles à Mina\n7. Le sacrifice d'un animal\n8. Le Tawâf d'adieu",
   },
 
   // Questions supplémentaires — Les piliers de la foi
