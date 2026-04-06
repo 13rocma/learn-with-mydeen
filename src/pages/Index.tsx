@@ -61,7 +61,7 @@ const Index = () => {
       </section>
 
       {/* Features Grid */}
-      <section className="py-12 bg-background">
+      <section className="py-6 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <div className="flex items-center justify-center gap-3 mb-3">
