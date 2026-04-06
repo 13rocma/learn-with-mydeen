@@ -31,7 +31,7 @@ const App = () => (
               <Route path="/duas" element={<DuasPage />} />
               <Route path="/bases" element={<BasicsPage />} />
               {/* Ablutions now integrated in PrayerGuide */}
-              <Route path="/install" element={<InstallPage />} />
+              <Route path="/installer" element={<InstallPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
