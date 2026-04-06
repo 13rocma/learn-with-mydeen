@@ -39,7 +39,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative h-[55vh] min-h-[380px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[45vh] min-h-[320px] flex items-center justify-center overflow-hidden">
         <img
           src={heroBg}
           alt="Calligraphie arabe dorée"
