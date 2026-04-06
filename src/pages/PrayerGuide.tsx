@@ -305,11 +305,11 @@ const PrayerGuide = () => {
               </div>
               {(step.arabic || step.phonetic || step.translation) && (
                 <div className="bg-muted/50 rounded-lg p-5 space-y-3">
-                  {step.arabic && (
-                    <p className="arabic-text text-center text-xl leading-loose">{step.arabic}</p>
-                  )}
                   {step.phonetic && (
                     <p className="phonetic-text text-center text-base font-semibold">{step.phonetic}</p>
+                  )}
+                  {step.arabic && (
+                    <p className="arabic-text text-center text-xl leading-loose">{step.arabic}</p>
                   )}
                   {step.translation && (
                     <p className="text-center text-sm text-muted-foreground">{step.translation}</p>
