@@ -43,6 +43,9 @@ const BasicsPage = () => {
         {/* Pillar buttons when "Les piliers de l'Islam" is active and no pillar selected */}
         {activeCategory === "Les piliers de l'Islam" && !activePillar && (
           <div className="grid grid-cols-1 gap-3 animate-fade-in">
+            <p className="text-muted-foreground text-center mb-2">
+              Les 5 piliers de l'Islam sont les fondements sur lesquels repose la pratique de tout musulman :
+            </p>
             {pillarsOfIslam.map((pillar) => (
               <button
                 key={pillar.id}
