@@ -177,42 +177,6 @@ export const basicsQuestions: BasicQuestion[] = [
       "La Shahada est la déclaration de foi : « Ash-hadou an lâ ilâha illa Allâh, wa ash-hadou anna Muhammadan rasûlou Allâh » — « J'atteste qu'il n'y a de divinité digne d'adoration qu'Allah, et j'atteste que Muhammad est le messager d'Allah. » C'est le premier pilier de l'Islam et l'acte par lequel on entre dans la religion.",
   },
 
-  // Les 5 piliers de l'Islam
-  {
-    id: 5,
-    category: "Les piliers de l'Islam",
-    question: "Quels sont les 5 piliers de l'Islam ?",
-    answer:
-      "Les cinq piliers sont les fondements de la pratique musulmane :\n\n1. La Shahada — l'attestation de foi\n2. La Salat — les 5 prières quotidiennes\n3. La Zakat — l'aumône obligatoire\n4. Le Sawm — le jeûne du mois de Ramadan\n5. Le Hajj — le pèlerinage à La Mecque (pour celui qui en a la capacité)",
-  },
-  {
-    id: 6,
-    category: "Les piliers de l'Islam",
-    question: "Qu'est-ce que la Salat (prière) ?",
-    answer:
-      "La Salat est la prière rituelle que chaque musulman doit accomplir 5 fois par jour : Fajr (aube), Dhuhr (midi), Asr (après-midi), Maghrib (coucher du soleil) et Isha (nuit). C'est un moment de connexion directe avec Allah, sans intermédiaire.",
-  },
-  {
-    id: 7,
-    category: "Les piliers de l'Islam",
-    question: "Qu'est-ce que la Zakat ?",
-    answer:
-      "La Zakat est l'aumône obligatoire. Chaque musulman possédant une richesse au-delà d'un certain seuil (le nisâb) doit donner 2,5% de ses économies annuelles aux personnes dans le besoin. C'est un acte de purification de la richesse et de solidarité.",
-  },
-  {
-    id: 8,
-    category: "Les piliers de l'Islam",
-    question: "Qu'est-ce que le jeûne du Ramadan ?",
-    answer:
-      "Le jeûne du Ramadan (Sawm) consiste à s'abstenir de manger, boire et avoir des relations intimes du lever au coucher du soleil durant le mois de Ramadan. C'est un mois de purification spirituelle, de générosité et de rapprochement avec Allah.",
-  },
-  {
-    id: 9,
-    category: "Les piliers de l'Islam",
-    question: "Qu'est-ce que le Hajj ?",
-    answer:
-      "Le Hajj est le pèlerinage à La Mecque (Arabie Saoudite) que tout musulman ayant les moyens physiques et financiers doit accomplir au moins une fois dans sa vie. Il se déroule chaque année durant le mois de Dhoul Hijja.",
-  },
 
   // Les 6 piliers de la foi
   {
