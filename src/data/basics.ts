@@ -3,6 +3,7 @@ export interface BasicQuestion {
   question: string;
   answer: string;
   category: string;
+  pillar?: string;
 }
 
 export const basicsCategories = [
@@ -10,6 +11,139 @@ export const basicsCategories = [
   "Les piliers de l'Islam",
   "Les piliers de la foi",
   "Le Prophète ﷺ",
+];
+
+export interface Pillar {
+  id: string;
+  name: string;
+  arabicName: string;
+  icon: string;
+  description: string;
+}
+
+export const pillarsOfIslam: Pillar[] = [
+  { id: "shahada", name: "La Shahada", arabicName: "الشهادة", icon: "☝️", description: "L'attestation de foi" },
+  { id: "salat", name: "La Salat", arabicName: "الصلاة", icon: "🤲", description: "La prière" },
+  { id: "zakat", name: "La Zakat", arabicName: "الزكاة", icon: "💰", description: "L'aumône obligatoire" },
+  { id: "sawm", name: "Le Sawm", arabicName: "الصوم", icon: "🌙", description: "Le jeûne du Ramadan" },
+  { id: "hajj", name: "Le Hajj", arabicName: "الحج", icon: "🕋", description: "Le pèlerinage" },
+];
+
+export const pillarQuestions: BasicQuestion[] = [
+  // Shahada
+  {
+    id: 100,
+    category: "Les piliers de l'Islam",
+    pillar: "shahada",
+    question: "Qu'est-ce que la Shahada ?",
+    answer: "La Shahada est la déclaration de foi : « Ash-hadou an lâ ilâha illa Allâh, wa ash-hadou anna Muhammadan rasûlou Allâh » — « J'atteste qu'il n'y a de divinité digne d'adoration qu'Allah, et j'atteste que Muhammad est le messager d'Allah. » C'est le premier pilier de l'Islam et l'acte par lequel on entre dans la religion.",
+  },
+  {
+    id: 101,
+    category: "Les piliers de l'Islam",
+    pillar: "shahada",
+    question: "Quelles sont les conditions de la Shahada ?",
+    answer: "La Shahada a 7 conditions :\n\n1. La science (al-'ilm) — savoir ce qu'elle signifie\n2. La certitude (al-yaqîn) — sans aucun doute\n3. L'acceptation (al-qabûl) — accepter tout ce qu'elle implique\n4. La soumission (al-inqiyâd) — agir en conséquence\n5. La sincérité (as-sidq) — la prononcer avec véracité\n6. La pureté d'intention (al-ikhlâs) — uniquement pour Allah\n7. L'amour (al-mahabba) — aimer ce qu'elle implique",
+  },
+  {
+    id: 102,
+    category: "Les piliers de l'Islam",
+    pillar: "shahada",
+    question: "Que signifie « Lâ ilâha illa Allâh » ?",
+    answer: "Cela signifie « Il n'y a de divinité digne d'adoration qu'Allah ». Cette formule nie toute forme d'adoration envers autre qu'Allah et affirme qu'Il est le seul à mériter l'adoration. C'est le fondement du monothéisme islamique (Tawhîd).",
+  },
+
+  // Salat
+  {
+    id: 200,
+    category: "Les piliers de l'Islam",
+    pillar: "salat",
+    question: "Qu'est-ce que la Salat (prière) ?",
+    answer: "La Salat est la prière rituelle que chaque musulman doit accomplir 5 fois par jour : Fajr (aube), Dhuhr (midi), Asr (après-midi), Maghrib (coucher du soleil) et Isha (nuit). C'est un moment de connexion directe avec Allah, sans intermédiaire.",
+  },
+  {
+    id: 201,
+    category: "Les piliers de l'Islam",
+    pillar: "salat",
+    question: "Combien de prières obligatoires y a-t-il par jour ?",
+    answer: "Il y a 5 prières obligatoires par jour :\n\n1. Fajr — 2 unités (raka'ât), avant le lever du soleil\n2. Dhuhr — 4 unités, au début de l'après-midi\n3. Asr — 4 unités, en milieu d'après-midi\n4. Maghrib — 3 unités, juste après le coucher du soleil\n5. Isha — 4 unités, la nuit",
+  },
+  {
+    id: 202,
+    category: "Les piliers de l'Islam",
+    pillar: "salat",
+    question: "Quelles sont les conditions de la prière ?",
+    answer: "Pour que la prière soit valide, il faut :\n\n• Être musulman\n• Être pubère et sain d'esprit\n• Être en état de pureté rituelle (wudû')\n• Couvrir sa 'awra (parties du corps à couvrir)\n• Prier dans la direction de La Mecque (qibla)\n• Prier dans le temps prescrit\n• Avoir l'intention (niyya)",
+  },
+
+  // Zakat
+  {
+    id: 300,
+    category: "Les piliers de l'Islam",
+    pillar: "zakat",
+    question: "Qu'est-ce que la Zakat ?",
+    answer: "La Zakat est l'aumône obligatoire. Chaque musulman possédant une richesse au-delà d'un certain seuil (le nisâb) doit donner 2,5% de ses économies annuelles aux personnes dans le besoin. C'est un acte de purification de la richesse et de solidarité.",
+  },
+  {
+    id: 301,
+    category: "Les piliers de l'Islam",
+    pillar: "zakat",
+    question: "Qui doit payer la Zakat et combien ?",
+    answer: "Tout musulman adulte possédant une richesse supérieure au nisâb (seuil minimum, équivalent à environ 85g d'or) pendant une année lunaire complète doit verser 2,5% de cette richesse. La Zakat est distribuée à 8 catégories de bénéficiaires mentionnées dans le Coran (sourate 9, verset 60).",
+  },
+  {
+    id: 302,
+    category: "Les piliers de l'Islam",
+    pillar: "zakat",
+    question: "Quelle est la différence entre Zakat et Sadaqa ?",
+    answer: "La Zakat est une aumône obligatoire avec un montant précis (2,5%) et des conditions spécifiques (nisâb, durée d'un an). La Sadaqa est une aumône volontaire, sans montant fixe, que l'on peut donner à tout moment et à toute personne dans le besoin. Les deux sont des actes méritoires en Islam.",
+  },
+
+  // Sawm
+  {
+    id: 400,
+    category: "Les piliers de l'Islam",
+    pillar: "sawm",
+    question: "Qu'est-ce que le jeûne du Ramadan ?",
+    answer: "Le jeûne du Ramadan (Sawm) consiste à s'abstenir de manger, boire et avoir des relations intimes du lever au coucher du soleil durant le mois de Ramadan. C'est un mois de purification spirituelle, de générosité et de rapprochement avec Allah.",
+  },
+  {
+    id: 401,
+    category: "Les piliers de l'Islam",
+    pillar: "sawm",
+    question: "Qui est dispensé du jeûne du Ramadan ?",
+    answer: "Sont dispensés du jeûne :\n\n• Les enfants avant la puberté\n• Les malades (temporairement ou définitivement)\n• Les voyageurs (ils rattrapent plus tard)\n• Les femmes enceintes, allaitantes ou en période de menstrues\n• Les personnes âgées incapables de jeûner (elles compensent en nourrissant un pauvre par jour manqué)",
+  },
+  {
+    id: 402,
+    category: "Les piliers de l'Islam",
+    pillar: "sawm",
+    question: "Qu'est-ce qui annule le jeûne ?",
+    answer: "Les choses qui annulent le jeûne sont :\n\n• Manger ou boire volontairement\n• Les relations intimes\n• Le vomissement provoqué volontairement\n• Les menstrues ou les lochies\n\nSi quelqu'un mange ou boit par oubli, son jeûne reste valide selon la majorité des savants.",
+  },
+
+  // Hajj
+  {
+    id: 500,
+    category: "Les piliers de l'Islam",
+    pillar: "hajj",
+    question: "Qu'est-ce que le Hajj ?",
+    answer: "Le Hajj est le pèlerinage à La Mecque (Arabie Saoudite) que tout musulman ayant les moyens physiques et financiers doit accomplir au moins une fois dans sa vie. Il se déroule chaque année durant le mois de Dhoul Hijja.",
+  },
+  {
+    id: 501,
+    category: "Les piliers de l'Islam",
+    pillar: "hajj",
+    question: "Quelles sont les conditions pour accomplir le Hajj ?",
+    answer: "Les conditions du Hajj sont :\n\n• Être musulman\n• Être pubère\n• Être sain d'esprit\n• Être libre\n• Avoir la capacité physique et financière\n• Pour la femme : être accompagnée d'un mahram (tuteur masculin)\n\nLe Hajj n'est obligatoire qu'une seule fois dans la vie.",
+  },
+  {
+    id: 502,
+    category: "Les piliers de l'Islam",
+    pillar: "hajj",
+    question: "Quelle est la différence entre le Hajj et la 'Umra ?",
+    answer: "Le Hajj est le grand pèlerinage, obligatoire une fois dans la vie, et se déroule à des dates précises du mois de Dhoul Hijja. La 'Umra est le petit pèlerinage, recommandé mais non obligatoire, et peut être accompli à tout moment de l'année. Le Hajj comprend des rites supplémentaires comme la station à 'Arafat et les nuits à Muzdalifa et Minâ.",
+  },
 ];
 
 export const basicsQuestions: BasicQuestion[] = [
