@@ -268,35 +268,6 @@ export const basicsQuestions: BasicQuestion[] = [
       "Un prophète (nabî) est celui à qui Allah a révélé une loi ou un message. Un messager (rasûl) est un prophète qui a reçu en plus la mission de transmettre une nouvelle législation à son peuple. Tout messager est prophète, mais tout prophète n'est pas messager. L'Islam reconnaît 25 prophètes mentionnés dans le Coran.",
   },
 
-  // Questions supplémentaires — Les piliers de l'Islam
-  {
-    id: 23,
-    category: "Les piliers de l'Islam",
-    question: "Combien de prières obligatoires y a-t-il par jour ?",
-    answer:
-      "Il y a 5 prières obligatoires par jour :\n\n1. Fajr — 2 unités (raka'ât), avant le lever du soleil\n2. Dhuhr — 4 unités, au début de l'après-midi\n3. Asr — 4 unités, en milieu d'après-midi\n4. Maghrib — 3 unités, juste après le coucher du soleil\n5. Isha — 4 unités, la nuit",
-  },
-  {
-    id: 24,
-    category: "Les piliers de l'Islam",
-    question: "Quelles sont les conditions de la prière ?",
-    answer:
-      "Pour que la prière soit valide, il faut :\n\n• Être musulman\n• Être pubère et sain d'esprit\n• Être en état de pureté rituelle (wudû')\n• Couvrir sa 'awra (parties du corps à couvrir)\n• Prier dans la direction de La Mecque (qibla)\n• Prier dans le temps prescrit\n• Avoir l'intention (niyya)",
-  },
-  {
-    id: 25,
-    category: "Les piliers de l'Islam",
-    question: "Qui doit payer la Zakat et combien ?",
-    answer:
-      "Tout musulman adulte possédant une richesse supérieure au nisâb (seuil minimum, équivalent à environ 85g d'or) pendant une année lunaire complète doit verser 2,5% de cette richesse. La Zakat est distribuée à 8 catégories de bénéficiaires mentionnées dans le Coran (sourate 9, verset 60).",
-  },
-  {
-    id: 26,
-    category: "Les piliers de l'Islam",
-    question: "Qui est dispensé du jeûne du Ramadan ?",
-    answer:
-      "Sont dispensés du jeûne :\n\n• Les enfants avant la puberté\n• Les malades (temporairement ou définitivement)\n• Les voyageurs (ils rattrapent plus tard)\n• Les femmes enceintes, allaitantes ou en période de menstrues\n• Les personnes âgées incapables de jeûner (elles compensent en nourrissant un pauvre par jour manqué)",
-  },
 
   // Questions supplémentaires — Les piliers de la foi
   {
