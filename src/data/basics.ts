@@ -216,6 +216,148 @@ export const pillarQuestions: BasicQuestion[] = [
   },
 ];
 
+export const pillarsOfFaith: Pillar[] = [
+  { id: "allah", name: "Croire en Allah", arabicName: "الإيمان بالله", icon: "🤲", description: "La croyance en Dieu unique" },
+  { id: "anges", name: "Croire aux Anges", arabicName: "الإيمان بالملائكة", icon: "✨", description: "La croyance aux anges" },
+  { id: "livres", name: "Croire aux Livres", arabicName: "الإيمان بالكتب", icon: "📖", description: "La croyance aux livres révélés" },
+  { id: "prophetes", name: "Croire aux Prophètes", arabicName: "الإيمان بالرسل", icon: "🕊️", description: "La croyance aux prophètes et messagers" },
+  { id: "jugement", name: "Croire au Jour du Jugement", arabicName: "الإيمان باليوم الآخر", icon: "⚖️", description: "La croyance au Jour Dernier" },
+  { id: "destin", name: "Croire au Destin", arabicName: "الإيمان بالقدر", icon: "📜", description: "La croyance au destin bon ou mauvais" },
+];
+
+export const faithPillarQuestions: BasicQuestion[] = [
+  // Croire en Allah
+  {
+    id: 600,
+    category: "Les piliers de la foi",
+    pillar: "allah",
+    question: "Que signifie croire en Allah ?",
+    answer: "Croire en Allah signifie croire en Son existence, en Son unicité (Tawhîd), en Ses noms et attributs parfaits, et en le fait qu'Il est le seul Créateur, le seul Maître et le seul digne d'adoration. Cette croyance implique de L'adorer sans Lui associer quoi que ce soit.",
+  },
+  {
+    id: 601,
+    category: "Les piliers de la foi",
+    pillar: "allah",
+    question: "Quelles sont les catégories du Tawhîd (unicité de Dieu) ?",
+    answer: "Le Tawhîd se divise en trois catégories :\n\n1. Tawhîd ar-Rubûbiyya — L'unicité de la Seigneurie : Allah est le seul Créateur, Pourvoyeur et Gestionnaire de l'univers.\n2. Tawhîd al-Ulûhiyya — L'unicité de l'adoration : seul Allah mérite d'être adoré.\n3. Tawhîd al-Asmâ' wa as-Sifât — L'unicité des noms et attributs : Allah possède des noms et attributs parfaits, sans ressemblance avec Sa création.",
+  },
+  {
+    id: 602,
+    category: "Les piliers de la foi",
+    pillar: "allah",
+    question: "Comment connaît-on Allah ?",
+    answer: "On connaît Allah à travers :\n\n• Ses signes dans la création (l'univers, la nature, le corps humain)\n• Ses noms et attributs mentionnés dans le Coran et la Sunna\n• Ses livres révélés, en particulier le Coran\n• La réflexion et la méditation sur Ses bienfaits\n\nAllah dit : « En vérité, dans la création des cieux et de la terre, il y a certes des signes pour les doués d'intelligence. » (Coran, 3:190)",
+  },
+
+  // Croire aux Anges
+  {
+    id: 610,
+    category: "Les piliers de la foi",
+    pillar: "anges",
+    question: "Qui sont les anges en Islam ?",
+    answer: "Les anges sont des créatures de lumière créées par Allah. Ils n'ont ni libre arbitre ni désirs personnels et obéissent parfaitement à Allah. Ils ne mangent pas, ne boivent pas et ne dorment pas. Ils glorifient Allah sans cesse et accomplissent les missions qu'Il leur confie.",
+  },
+  {
+    id: 611,
+    category: "Les piliers de la foi",
+    pillar: "anges",
+    question: "Quels sont les anges les plus connus ?",
+    answer: "Parmi les anges les plus connus :\n\n• Jibrîl (Gabriel) — chargé de transmettre la révélation divine\n• Mîkâ'îl (Michaël) — chargé des provisions et de la pluie\n• Isrâfîl — chargé de souffler dans la trompe le Jour du Jugement\n• Malak al-Mawt — l'ange de la mort\n• Ridwân — gardien du Paradis\n• Mâlik — gardien de l'Enfer\n• Kirâman Kâtibîn — les anges scribes qui enregistrent les actes de chaque personne",
+  },
+  {
+    id: 612,
+    category: "Les piliers de la foi",
+    pillar: "anges",
+    question: "Quelle est la différence entre les anges et les djinns ?",
+    answer: "Les anges sont créés de lumière et obéissent parfaitement à Allah, sans libre arbitre. Les djinns sont créés de feu et possèdent le libre arbitre : ils peuvent choisir d'obéir ou de désobéir à Allah. Parmi les djinns, certains sont croyants et d'autres mécréants. Iblîs (Satan) est un djinn qui a refusé de se prosterner devant Adam.",
+  },
+
+  // Croire aux Livres
+  {
+    id: 620,
+    category: "Les piliers de la foi",
+    pillar: "livres",
+    question: "Quels sont les livres révélés par Allah ?",
+    answer: "Allah a révélé plusieurs livres à Ses prophètes :\n\n• Les Feuillets (Suhuf) à Ibrahim (Abraham)\n• La Torah (Tawrât) à Mûsâ (Moïse)\n• Les Psaumes (Zabûr) à Dâwûd (David)\n• L'Évangile (Injîl) à 'Îsâ (Jésus)\n• Le Coran à Muhammad ﷺ\n\nLes musulmans croient que le Coran est le dernier livre révélé et qu'il abroge les législations précédentes.",
+  },
+  {
+    id: 621,
+    category: "Les piliers de la foi",
+    pillar: "livres",
+    question: "Pourquoi le Coran est-il spécial par rapport aux autres livres ?",
+    answer: "Le Coran est spécial car :\n\n• Il est le dernier livre révélé par Allah\n• Il est préservé dans sa forme originale depuis plus de 1400 ans, comme Allah l'a promis : « C'est Nous qui avons fait descendre le Rappel, et c'est Nous qui en sommes les gardiens. » (Coran, 15:9)\n• Il s'adresse à toute l'humanité, pas seulement à un peuple\n• Il abroge les législations des livres précédents\n• Il est inimitable dans son style et son contenu",
+  },
+
+  // Croire aux Prophètes
+  {
+    id: 630,
+    category: "Les piliers de la foi",
+    pillar: "prophetes",
+    question: "Combien de prophètes sont mentionnés dans le Coran ?",
+    answer: "Le Coran mentionne 25 prophètes par leur nom, parmi lesquels : Adam, Noé (Nûh), Abraham (Ibrâhîm), Moïse (Mûsâ), Jésus ('Îsâ) et Muhammad ﷺ. Cependant, il y a eu beaucoup plus de prophètes envoyés à l'humanité. Le Prophète ﷺ a dit qu'ils étaient 124 000 prophètes au total.",
+  },
+  {
+    id: 631,
+    category: "Les piliers de la foi",
+    pillar: "prophetes",
+    question: "Quelle est la différence entre un prophète (nabî) et un messager (rasûl) ?",
+    answer: "Un prophète (nabî) est une personne qui reçoit une révélation d'Allah pour se guider et guider les gens, mais qui suit la législation d'un messager précédent. Un messager (rasûl) est un prophète à qui Allah a donné une nouvelle législation (sharî'a) à transmettre à son peuple. Tout messager est un prophète, mais tout prophète n'est pas nécessairement un messager.",
+  },
+  {
+    id: 632,
+    category: "Les piliers de la foi",
+    pillar: "prophetes",
+    question: "Quel est le message commun de tous les prophètes ?",
+    answer: "Le message commun de tous les prophètes est le Tawhîd : l'appel à adorer Allah seul, sans Lui associer quoi que ce soit. Chaque prophète a dit à son peuple : « Adorez Allah, vous n'avez aucune autre divinité en dehors de Lui. » (Coran, 7:59). Ils ont tous appelé au bien, interdit le mal, et annoncé les bonnes nouvelles du Paradis et l'avertissement de l'Enfer.",
+  },
+
+  // Croire au Jour du Jugement
+  {
+    id: 640,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Qu'est-ce que le Jour du Jugement ?",
+    answer: "Le Jour du Jugement (Yawm al-Qiyâma) est le jour où Allah ressuscitera toute l'humanité pour la juger selon ses actes. Les bonnes actions et les mauvaises seront pesées sur une balance (al-Mîzân). Ceux qui auront bien agi entreront au Paradis, et ceux qui auront mal agi seront châtiés, sauf si Allah leur pardonne.",
+  },
+  {
+    id: 641,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Quels sont les signes majeurs du Jour du Jugement ?",
+    answer: "Parmi les signes majeurs de l'Heure :\n\n• L'apparition du Dajjâl (l'Antéchrist)\n• La descente de 'Îsâ (Jésus) sur terre\n• L'apparition de Ya'jûj et Ma'jûj (Gog et Magog)\n• Le lever du soleil depuis l'Ouest\n• La sortie de la Bête de la terre\n• Une fumée (Dukhân) qui couvrira la terre\n• Trois grands effondrements de terrain\n• Un feu qui rassemblera les gens vers le lieu de rassemblement",
+  },
+  {
+    id: 642,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Qu'est-ce que le Paradis et l'Enfer ?",
+    answer: "Le Paradis (Janna) est la demeure éternelle de félicité préparée par Allah pour les croyants. On y trouve des bienfaits inimaginables et le plus grand bonheur est de voir le visage d'Allah. L'Enfer (Jahannam) est le châtiment préparé pour les mécréants et les désobéissants. Allah invite l'humanité à œuvrer pour le Paradis et à se préserver de l'Enfer par la foi et les bonnes actions.",
+  },
+
+  // Croire au Destin
+  {
+    id: 650,
+    category: "Les piliers de la foi",
+    pillar: "destin",
+    question: "Qu'est-ce que le destin (Qadar) en Islam ?",
+    answer: "Croire au Qadar signifie croire que tout ce qui arrive — le bien comme le mal — est décrété par Allah selon Sa sagesse. Cela comprend quatre niveaux :\n\n1. La science (al-'Ilm) — Allah sait tout de toute éternité\n2. L'écriture (al-Kitâba) — Tout est écrit dans la Table Préservée (al-Lawh al-Mahfûdh)\n3. La volonté (al-Mashî'a) — Rien ne se produit sans la volonté d'Allah\n4. La création (al-Khalq) — Allah est le Créateur de toute chose",
+  },
+  {
+    id: 651,
+    category: "Les piliers de la foi",
+    pillar: "destin",
+    question: "Le destin supprime-t-il le libre arbitre ?",
+    answer: "Non, croire au destin ne supprime pas le libre arbitre. Allah a donné à l'homme la capacité de choisir et de faire des efforts. L'homme est responsable de ses choix et sera jugé en conséquence. Le destin et le libre arbitre coexistent : Allah sait ce que l'homme choisira, mais c'est l'homme qui fait son choix. Le croyant fait des efforts tout en s'en remettant à Allah (tawakkul).",
+  },
+  {
+    id: 652,
+    category: "Les piliers de la foi",
+    pillar: "destin",
+    question: "Comment réagir face aux épreuves selon l'Islam ?",
+    answer: "Face aux épreuves, le musulman doit :\n\n• Faire preuve de patience (sabr) et accepter le décret d'Allah\n• Se rappeler que les épreuves sont un moyen de purification des péchés\n• Invoquer Allah et chercher Son aide\n• Ne pas se plaindre du destin d'Allah\n\nLe Prophète ﷺ a dit : « L'affaire du croyant est étonnante, tout est un bien pour lui : s'il lui arrive un bonheur, il remercie et c'est un bien ; s'il lui arrive un malheur, il patiente et c'est un bien. » (Rapporté par Muslim)",
+  },
+];
+
 export const basicsQuestions: BasicQuestion[] = [
   // Les fondements
   {

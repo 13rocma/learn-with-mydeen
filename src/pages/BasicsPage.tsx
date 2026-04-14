@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { basicsCategories, basicsQuestions, pillarsOfIslam, pillarQuestions } from "@/data/basics";
+import { basicsCategories, basicsQuestions, pillarsOfIslam, pillarQuestions, pillarsOfFaith, faithPillarQuestions } from "@/data/basics";
 import { ChevronDown, ChevronUp, ArrowLeft } from "lucide-react";
 import PageHeroBanner from "@/components/PageHeroBanner";
 
@@ -8,11 +8,15 @@ const BasicsPage = () => {
   const [openQuestion, setOpenQuestion] = useState<number | null>(null);
   const [activePillar, setActivePillar] = useState<string | null>(null);
 
-  const filtered = activeCategory === "Les piliers de l'Islam" && activePillar
-    ? pillarQuestions.filter((q) => q.pillar === activePillar)
+  const isPillarCategory = activeCategory === "Les piliers de l'Islam" || activeCategory === "Les piliers de la foi";
+  const currentPillarList = activeCategory === "Les piliers de l'Islam" ? pillarsOfIslam : pillarsOfFaith;
+  const currentPillarQuestions = activeCategory === "Les piliers de l'Islam" ? pillarQuestions : faithPillarQuestions;
+
+  const filtered = isPillarCategory && activePillar
+    ? currentPillarQuestions.filter((q) => q.pillar === activePillar)
     : basicsQuestions.filter((q) => q.category === activeCategory);
 
-  const currentPillar = pillarsOfIslam.find(p => p.id === activePillar);
+  const currentPillar = currentPillarList.find(p => p.id === activePillar);
 
   return (
     <div className="min-h-screen">
@@ -41,12 +45,14 @@ const BasicsPage = () => {
         </div>
 
         {/* Pillar buttons when "Les piliers de l'Islam" is active and no pillar selected */}
-        {activeCategory === "Les piliers de l'Islam" && !activePillar && (
+        {isPillarCategory && !activePillar && (
           <div className="grid grid-cols-1 gap-3 animate-fade-in">
             <p className="text-muted-foreground text-center mb-2">
-              Les 5 piliers de l'Islam sont les fondements sur lesquels repose la pratique de tout musulman :
+              {activeCategory === "Les piliers de l'Islam"
+                ? "Les 5 piliers de l'Islam sont les fondements sur lesquels repose la pratique de tout musulman :"
+                : "Les 6 piliers de la foi (Arkân al-Îmân) sont les croyances fondamentales de tout musulman :"}
             </p>
-            {pillarsOfIslam.map((pillar) => (
+            {currentPillarList.map((pillar) => (
               <button
                 key={pillar.id}
                 onClick={() => {
@@ -69,7 +75,7 @@ const BasicsPage = () => {
         )}
 
         {/* Back button when viewing a pillar */}
-        {activeCategory === "Les piliers de l'Islam" && activePillar && currentPillar && (
+        {isPillarCategory && activePillar && currentPillar && (
           <div className="mb-6 animate-fade-in">
             <button
               onClick={() => {
@@ -90,7 +96,7 @@ const BasicsPage = () => {
         )}
 
         {/* Questions (shown for non-pillar categories, or when a pillar is selected) */}
-        {(activeCategory !== "Les piliers de l'Islam" || activePillar) && (
+        {(!isPillarCategory || activePillar) && (
           <div className="space-y-3 animate-fade-in" key={activeCategory + (activePillar || "")}>
             {filtered.map((q) => (
               <div key={q.id} className="section-card">
