@@ -389,44 +389,6 @@ export const basicsQuestions: BasicQuestion[] = [
       "La Shahada est la déclaration de foi : « Ash-hadou an lâ ilâha illa Allâh, wa ash-hadou anna Muhammadan rasûlou Allâh » — « J'atteste qu'il n'y a de divinité digne d'adoration qu'Allah, et j'atteste que Muhammad est le messager d'Allah. » C'est le premier pilier de l'Islam et l'acte par lequel on entre dans la religion.",
   },
 
-
-  // Les 6 piliers de la foi
-  {
-    id: 10,
-    category: "Les piliers de la foi",
-    question: "Quels sont les 6 piliers de la foi ?",
-    answer:
-      "Les six piliers de la foi (Arkân al-Îmân) sont :\n\n1. Croire en Allah\n2. Croire en Ses anges\n3. Croire en Ses livres révélés\n4. Croire en Ses prophètes et messagers\n5. Croire au Jour du Jugement\n6. Croire au destin (Qadar), qu'il soit bon ou mauvais",
-  },
-  {
-    id: 11,
-    category: "Les piliers de la foi",
-    question: "Qui sont les anges en Islam ?",
-    answer:
-      "Les anges sont des créatures de lumière créées par Allah. Ils n'ont ni libre arbitre ni désirs personnels et obéissent parfaitement à Allah. Parmi les anges connus : Jibrîl (Gabriel, qui apporte la révélation), Mîkâ'îl (qui gère les provisions), Isrâfîl (qui soufflera dans la trompe) et Malak al-Mawt (l'ange de la mort).",
-  },
-  {
-    id: 12,
-    category: "Les piliers de la foi",
-    question: "Quels sont les livres révélés ?",
-    answer:
-      "Allah a révélé plusieurs livres à Ses prophètes :\n\n• Les Feuillets (Suhuf) d'Ibrahim\n• La Torah (Tawrât) à Moïse\n• Les Psaumes (Zabûr) à David\n• L'Évangile (Injîl) à Jésus\n• Le Coran à Muhammad ﷺ\n\nLes musulmans croient que le Coran est le dernier message divin, préservé dans sa forme originale.",
-  },
-  {
-    id: 13,
-    category: "Les piliers de la foi",
-    question: "Qu'est-ce que le Jour du Jugement ?",
-    answer:
-      "Le Jour du Jugement (Yawm al-Qiyâma) est le jour où Allah ressuscitera toute l'humanité pour la juger selon ses actes. Les bonnes actions et les mauvaises seront pesées sur une balance. Ceux qui auront bien agi entreront au Paradis, et ceux qui auront mal agi seront châtiés, sauf si Allah leur pardonne.",
-  },
-  {
-    id: 14,
-    category: "Les piliers de la foi",
-    question: "Qu'est-ce que le destin (Qadar) ?",
-    answer:
-      "Croire au Qadar signifie accepter que tout ce qui arrive — le bien comme le mal — est décrété par Allah. Cela ne signifie pas que l'homme n'a pas de libre arbitre, mais que la connaissance d'Allah englobe toute chose. Le croyant accepte les épreuves avec patience et les bienfaits avec gratitude.",
-  },
-
   // Le Prophète ﷺ
   {
     id: 15,
