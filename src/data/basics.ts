@@ -73,7 +73,21 @@ export const pillarQuestions: BasicQuestion[] = [
     category: "Les piliers de l'Islam",
     pillar: "salat",
     question: "Quelles sont les conditions de la prière ?",
-    answer: "Pour que la prière soit valide, il faut :\n\n• Être musulman\n• Être pubère et sain d'esprit\n• Être en état de pureté rituelle (wudû')\n• Couvrir sa 'awra (parties du corps à couvrir)\n• Prier dans la direction de La Mecque (qibla)\n• Prier dans le temps prescrit\n• Avoir l'intention (niyya)",
+    answer: "Pour que la prière soit valide, il faut :\n\n• Être musulman\n• Être pubère et sain d'esprit\n• Être en état de pureté rituelle (avoir fait ses ablutions)\n• Couvrir sa 'awra (parties du corps à couvrir)\n• Prier dans la direction de La Mecque (qibla)\n• Prier dans le temps prescrit\n• Avoir l'intention (niyya)",
+  },
+  {
+    id: 203,
+    category: "Les piliers de l'Islam",
+    pillar: "salat",
+    question: "Qu'est-ce qui annule les ablutions ?",
+    answer: "Les choses qui annulent les ablutions (wudû') sont :\n\n• Tout ce qui sort des deux voies naturelles (urine, selles, gaz)\n• Le sommeil profond\n• La perte de conscience (évanouissement)\n• Le toucher des parties intimes directement avec la main (sans barrière)\n• La consommation de viande de chameau (selon certains savants)\n\nSi les ablutions sont annulées, il faut les refaire avant de prier.",
+  },
+  {
+    id: 204,
+    category: "Les piliers de l'Islam",
+    pillar: "salat",
+    question: "Que faire si on a raté une prière ?",
+    answer: "Si un musulman a raté une prière obligatoire, il doit la rattraper dès qu'il s'en souvient ou dès qu'il en a la possibilité. C'est ce qu'on appelle le « qadâ' ». Le Prophète ﷺ a dit : « Celui qui oublie une prière ou dort et la manque, qu'il la prie dès qu'il s'en souvient, car c'est son seul rachat. » (Rapporté par Al-Bukhâri et Muslim). Il est important de ne pas retarder volontairement les prières.",
   },
 
   // Zakat
@@ -98,6 +112,13 @@ export const pillarQuestions: BasicQuestion[] = [
     question: "Quelle est la différence entre Zakat et Sadaqa ?",
     answer: "La Zakat est une aumône obligatoire avec un montant précis (2,5%) et des conditions spécifiques (nisâb, durée d'un an). La Sadaqa est une aumône volontaire, sans montant fixe, que l'on peut donner à tout moment et à toute personne dans le besoin. Les deux sont des actes méritoires en Islam.",
   },
+  {
+    id: 303,
+    category: "Les piliers de l'Islam",
+    pillar: "zakat",
+    question: "Qu'est-ce que la Zakat al-Fitr ?",
+    answer: "La Zakat al-Fitr est une aumône obligatoire que chaque musulman doit verser avant la prière de l'Aïd al-Fitr, à la fin du mois de Ramadan. Elle est due pour chaque membre de la famille, y compris les enfants. Son montant correspond à environ un sâ' (environ 2,5 à 3 kg) de nourriture de base (blé, riz, dattes, etc.). Elle a pour but de purifier le jeûneur de ses éventuels manquements et de nourrir les pauvres le jour de l'Aïd.",
+  },
 
   // Sawm
   {
@@ -121,6 +142,48 @@ export const pillarQuestions: BasicQuestion[] = [
     question: "Qu'est-ce qui annule le jeûne ?",
     answer: "Les choses qui annulent le jeûne sont :\n\n• Manger ou boire volontairement\n• Les relations intimes\n• Le vomissement provoqué volontairement\n• Les menstrues ou les lochies\n\nSi quelqu'un mange ou boit par oubli, son jeûne reste valide selon la majorité des savants.",
   },
+  {
+    id: 403,
+    category: "Les piliers de l'Islam",
+    pillar: "sawm",
+    question: "À quelle heure commence et se termine le jeûne chaque jour ?",
+    answer: "Le jeûne commence à l'aube (Fajr), au moment où apparaît la première lumière à l'horizon (l'aube véritable), et se termine au coucher du soleil (Maghrib). Le Prophète ﷺ a dit : « Mangez et buvez jusqu'à ce que vous puissiez distinguer le fil blanc du fil noir de l'aube, puis accomplissez le jeûne jusqu'à la nuit. » (Coran, sourate 2, verset 187). Il est recommandé de retarder le suhûr (repas avant l'aube) et de hâter l'iftâr (rupture du jeûne).",
+  },
+  {
+    id: 404,
+    category: "Les piliers de l'Islam",
+    pillar: "sawm",
+    question: "Que se passe-t-il si je romps involontairement le jeûne ?",
+    answer: "Si une personne mange, boit ou fait quelque chose qui annule le jeûne par oubli ou involontairement, son jeûne reste valide et elle doit le continuer. Le Prophète ﷺ a dit : « Si quelqu'un oublie qu'il jeûne et mange ou boit, qu'il continue son jeûne, car c'est Allah qui l'a nourri et abreuvé. » (Rapporté par Al-Bukhâri et Muslim).",
+  },
+  {
+    id: 405,
+    category: "Les piliers de l'Islam",
+    pillar: "sawm",
+    question: "Que se passe-t-il si je romps volontairement le jeûne ?",
+    answer: "Rompre volontairement le jeûne du Ramadan sans excuse valable est un péché grave. La personne doit se repentir sincèrement auprès d'Allah et rattraper le jour manqué. En cas de rupture par relation intime volontaire, une expiation (kaffâra) est requise : libérer un esclave, ou jeûner 60 jours consécutifs, ou nourrir 60 pauvres. Pour les autres cas de rupture volontaire, la personne doit rattraper le jour et se repentir.",
+  },
+  {
+    id: 406,
+    category: "Les piliers de l'Islam",
+    pillar: "sawm",
+    question: "Qu'est-ce que la prière de Tarawih, est-elle obligatoire ?",
+    answer: "La prière de Tarawih est une prière surérogatoire (non obligatoire mais fortement recommandée) accomplie chaque nuit du mois de Ramadan, après la prière de 'Isha. Elle se prie généralement en groupe à la mosquée. Le Prophète ﷺ a dit : « Celui qui prie durant les nuits de Ramadan avec foi et en espérant la récompense d'Allah, ses péchés passés lui seront pardonnés. » (Rapporté par Al-Bukhâri et Muslim). Elle se compose généralement de 8 ou 20 unités de prière (raka'ât).",
+  },
+  {
+    id: 407,
+    category: "Les piliers de l'Islam",
+    pillar: "sawm",
+    question: "Qu'est-ce que la nuit du Destin (Laylat al-Qadr) ?",
+    answer: "Laylat al-Qadr (la Nuit du Destin) est la nuit la plus bénie de l'année. C'est durant cette nuit que le Coran a commencé à être révélé. Allah dit : « La Nuit du Destin est meilleure que mille mois. » (Coran, sourate 97, verset 3). Elle se situe dans les dix dernières nuits du Ramadan, plus probablement les nuits impaires (21e, 23e, 25e, 27e ou 29e). Les musulmans la passent en prière, invocations et lecture du Coran.",
+  },
+  {
+    id: 408,
+    category: "Les piliers de l'Islam",
+    pillar: "sawm",
+    question: "Qu'est-ce que l'Aïd al-Fitr ?",
+    answer: "L'Aïd al-Fitr (la fête de la rupture du jeûne) est la fête qui marque la fin du mois de Ramadan. Elle a lieu le 1er jour du mois de Shawwâl. Les musulmans accomplissent une prière spéciale le matin, versent la Zakat al-Fitr, portent leurs plus beaux vêtements, se réjouissent et partagent des repas en famille. C'est un jour de gratitude envers Allah pour avoir permis d'accomplir le jeûne du Ramadan.",
+  },
 
   // Hajj
   {
@@ -143,6 +206,13 @@ export const pillarQuestions: BasicQuestion[] = [
     pillar: "hajj",
     question: "Quelle est la différence entre le Hajj et la 'Umra ?",
     answer: "Le Hajj est le grand pèlerinage, obligatoire une fois dans la vie, et se déroule à des dates précises du mois de Dhoul Hijja. La 'Umra est le petit pèlerinage, recommandé mais non obligatoire, et peut être accompli à tout moment de l'année. Le Hajj comprend des rites supplémentaires comme la station à 'Arafat et les nuits à Muzdalifa et Minâ.",
+  },
+  {
+    id: 503,
+    category: "Les piliers de l'Islam",
+    pillar: "hajj",
+    question: "Qu'est-ce que la Kaaba et quelle est son histoire ?",
+    answer: "La Kaaba est un édifice cubique situé au centre de la Grande Mosquée de La Mecque (Al-Masjid al-Harâm). Elle a été construite à l'origine par le prophète Ibrahim (Abraham) et son fils Ismaïl ('alayhi as-salâm) sur ordre d'Allah comme premier lieu d'adoration dédié au Dieu unique. Les musulmans du monde entier se tournent vers la Kaaba pour prier (qibla). Durant le Hajj et la 'Umra, les pèlerins effectuent le Tawâf, qui consiste à tourner sept fois autour de la Kaaba. Elle est recouverte d'un tissu noir brodé d'or appelé la Kiswa.",
   },
 ];
 
