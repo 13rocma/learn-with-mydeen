@@ -396,6 +396,41 @@ export const faithPillarQuestions: BasicQuestion[] = [
     question: "Qu'est-ce que le Paradis et l'Enfer ?",
     answer: "Le Paradis (Janna) est la demeure éternelle de félicité préparée par Allah pour les croyants. On y trouve des bienfaits inimaginables et le plus grand bonheur est de voir le visage d'Allah. L'Enfer (Jahannam) est le châtiment préparé pour les mécréants et les désobéissants. Allah invite l'humanité à œuvrer pour le Paradis et à se préserver de l'Enfer par la foi et les bonnes actions.",
   },
+  {
+    id: 643,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Quelles sont les étapes entre la mort et le Paradis/Enfer ?",
+    answer: "Entre la mort et l'entrée au Paradis ou en Enfer, l'âme traverse plusieurs étapes :\n\n1. La mort (al-Mawt) : l'ange de la mort recueille l'âme.\n2. Le Barzakh : vie intermédiaire dans la tombe, où l'âme est interrogée par les anges Munkar et Nakîr.\n3. La résurrection (al-Ba'th) : Allah ressuscitera tous les êtres humains lors du second souffle dans la trompe par l'ange Isrâfîl.\n4. Le rassemblement (al-Hashr) : tous les êtres humains seront rassemblés sur la Terre du Rassemblement, nus et pieds nus.\n5. Le jugement (al-Hisâb) : chacun rendra compte de ses actes devant Allah.\n6. La pesée (al-Mîzân) : les bonnes et mauvaises actions seront pesées sur la balance.\n7. La traversée du Sirât : un pont au-dessus de l'Enfer que chacun devra emprunter.\n8. L'entrée finale au Paradis ou en Enfer.",
+  },
+  {
+    id: 644,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Qu'est-ce que le Barzakh (vie dans la tombe) ?",
+    answer: "Le Barzakh est la vie intermédiaire qui sépare la mort de la résurrection. Le mot « Barzakh » signifie littéralement « barrière ». Allah dit : « Et derrière eux, il y a une barrière (Barzakh), jusqu'au jour où ils seront ressuscités. » (Coran, 23:100).\n\nDans la tombe, deux anges (Munkar et Nakîr) interrogent le défunt sur :\n• Son Seigneur : « Qui est ton Seigneur ? »\n• Sa religion : « Quelle est ta religion ? »\n• Son prophète : « Qui est ton prophète ? »\n\nLe croyant répond avec aisance et sa tombe devient un jardin du Paradis. Le mécréant ou le pécheur ne peut répondre, et sa tombe devient un châtiment. Cette vie du Barzakh dure jusqu'au Jour de la Résurrection.",
+  },
+  {
+    id: 645,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Qu'est-ce que la résurrection (Al-Ba'th) ?",
+    answer: "La résurrection (al-Ba'th) est le moment où Allah ressuscitera tous les êtres humains depuis Adam jusqu'au dernier-né, après que l'ange Isrâfîl aura soufflé une seconde fois dans la trompe (as-Sûr). Tous sortiront de leurs tombes, vivants à nouveau, dans leur corps recréé.\n\nAllah dit : « Puis, on soufflera de nouveau dans la trompe, et les voilà debout à regarder. » (Coran, 39:68).\n\nLes humains seront rassemblés sur la Terre du Rassemblement (Ard al-Mahshar), nus, pieds nus et non circoncis, comme ils sont venus au monde. C'est là qu'ils attendront leur jugement devant Allah. Croire en la résurrection est un fondement essentiel de la foi musulmane.",
+  },
+  {
+    id: 646,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Qu'est-ce que Al-Mizan (la balance des actes) ?",
+    answer: "Al-Mîzân est la balance véritable qu'Allah dressera le Jour du Jugement pour peser les actes des serviteurs avec une justice parfaite. Allah dit : « Au Jour de la Résurrection, Nous placerons les balances exactes. Nulle âme ne sera lésée en rien, fût-ce du poids d'un grain de moutarde. » (Coran, 21:47).\n\nSur cette balance seront pesés :\n• Les bonnes actions d'un côté\n• Les mauvaises actions de l'autre\n\nCelui dont les bonnes actions pèsent plus lourd sera sauvé et entrera au Paradis. Celui dont les mauvaises actions pèsent plus lourd sera en perdition, sauf si Allah lui pardonne par Sa miséricorde. C'est pourquoi le musulman est invité à multiplier les bonnes actions, même petites, car elles peuvent faire pencher la balance.",
+  },
+  {
+    id: 647,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Qu'est-ce que le Sirat (le pont au-dessus de l'Enfer) ?",
+    answer: "Le Sirât est un pont dressé au-dessus de l'Enfer que tous les êtres humains devront traverser pour atteindre le Paradis. Selon les hadiths, il est plus fin qu'un cheveu et plus tranchant qu'une épée.\n\nChaque personne le traversera à une vitesse correspondant à ses œuvres :\n• Certains le franchiront aussi vite que l'éclair\n• D'autres comme le vent\n• D'autres au galop d'un cheval\n• D'autres en marchant\n• D'autres en rampant\n• Certains tomberont en Enfer à cause de leurs péchés\n\nLe Prophète ﷺ a dit qu'il sera le premier à traverser ce pont avec sa communauté. Sur le Sirât, il y a des crochets qui saisiront ceux qu'Allah a destinés au châtiment. Ceux qui réussiront à le traverser entreront au Paradis pour l'éternité.",
+  },
 
   // Croire au Destin
   {
