@@ -248,6 +248,27 @@ export const faithPillarQuestions: BasicQuestion[] = [
     question: "Comment connaît-on Allah ?",
     answer: "On connaît Allah à travers :\n\n• Ses signes dans la création (l'univers, la nature, le corps humain)\n• Ses noms et attributs mentionnés dans le Coran et la Sunna\n• Ses livres révélés, en particulier le Coran\n• La réflexion et la méditation sur Ses bienfaits\n\nAllah dit : « En vérité, dans la création des cieux et de la terre, il y a certes des signes pour les doués d'intelligence. » (Coran, 3:190)",
   },
+  {
+    id: 603,
+    category: "Les piliers de la foi",
+    pillar: "allah",
+    question: "Qu'est-ce que le Shirk (l'association) et pourquoi est-ce le péché le plus grave ?",
+    answer: "Le Shirk consiste à associer à Allah une autre divinité ou à attribuer à une créature ce qui n'appartient qu'à Lui (l'adoration, la souveraineté absolue, la connaissance de l'invisible, etc.). C'est le péché le plus grave en Islam car il contredit la raison même de la création : adorer Allah seul. Allah dit : « Certes, Allah ne pardonne pas qu'on Lui donne des associés. À part cela, Il pardonne à qui Il veut. » (Coran, 4:48). Celui qui meurt sur le Shirk sans s'en repentir n'entrera pas au Paradis.",
+  },
+  {
+    id: 604,
+    category: "Les piliers de la foi",
+    pillar: "allah",
+    question: "Quelle est la différence entre Allah et les dieux des autres religions ?",
+    answer: "Allah est le Dieu unique, sans associé, sans enfant, sans père et sans semblable. Il n'a pas de forme humaine ni de représentation matérielle. Il dit dans le Coran : « Il n'y a rien qui Lui ressemble ; et c'est Lui l'Audient, le Clairvoyant. » (Coran, 42:11).\n\nContrairement à de nombreuses divinités d'autres religions, Allah :\n• N'est pas multiple (pas de trinité ni de panthéon)\n• N'a pas de représentation visuelle (statues, images)\n• Ne s'incarne pas dans une créature\n• N'a aucun besoin de Sa création\n\nC'est le même Dieu qui a envoyé tous les prophètes (Noé, Abraham, Moïse, Jésus, Muhammad…), mais avec un message purifié de toute altération.",
+  },
+  {
+    id: 605,
+    category: "Les piliers de la foi",
+    pillar: "allah",
+    question: "Allah a-t-il une forme ou un corps ?",
+    answer: "Allah n'est comparable à rien de Sa création. Il possède des attributs qui Lui sont propres et qui sont mentionnés dans le Coran et la Sunna (comme Son Visage, Ses Mains, Son élévation au-dessus du Trône), mais nous y croyons sans les comparer à ceux des créatures, sans les nier, sans les modifier et sans en chercher la modalité.\n\nLa règle des savants de l'Ahl as-Sunna est : « Rien ne Lui ressemble, et Il est l'Audient, le Clairvoyant » (Coran 42:11). Ainsi, on affirme ce qu'Allah a affirmé sur Lui-même, tout en étant certain qu'Il ne ressemble à aucune de Ses créatures et qu'Il n'a ni corps matériel ni forme imaginable par l'esprit humain.",
+  },
 
   // Croire aux Anges
   {
@@ -287,6 +308,27 @@ export const faithPillarQuestions: BasicQuestion[] = [
     question: "Pourquoi le Coran est-il spécial par rapport aux autres livres ?",
     answer: "Le Coran est spécial car :\n\n• Il est le dernier livre révélé par Allah\n• Il est préservé dans sa forme originale depuis plus de 1400 ans, comme Allah l'a promis : « C'est Nous qui avons fait descendre le Rappel, et c'est Nous qui en sommes les gardiens. » (Coran, 15:9)\n• Il s'adresse à toute l'humanité, pas seulement à un peuple\n• Il abroge les législations des livres précédents\n• Il est inimitable dans son style et son contenu",
   },
+  {
+    id: 622,
+    category: "Les piliers de la foi",
+    pillar: "livres",
+    question: "Qu'est-ce que la Tahrif (falsification des anciens livres) ?",
+    answer: "La Tahrif désigne l'altération ou la falsification subie par les livres révélés avant le Coran (Torah, Évangile, etc.). Cette altération a pu prendre plusieurs formes :\n\n• Modification du texte (ajouts, suppressions, changements de mots)\n• Mauvaise interprétation du sens d'origine\n• Perte de certains passages au fil des siècles\n\nAllah mentionne cela dans le Coran : « Certains parmi les juifs altèrent les paroles de leurs places. » (Coran, 4:46). C'est l'une des raisons pour lesquelles Allah a envoyé le Coran : pour rétablir le message original et le préserver jusqu'à la fin des temps. Les musulmans respectent les livres précédents dans leur forme originelle révélée, mais suivent uniquement le Coran comme référence.",
+  },
+  {
+    id: 623,
+    category: "Les piliers de la foi",
+    pillar: "livres",
+    question: "Le Coran a-t-il été modifié depuis sa révélation ?",
+    answer: "Non, le Coran n'a subi aucune modification depuis sa révélation au Prophète Muhammad ﷺ il y a plus de 1400 ans. Allah Lui-même s'est engagé à le préserver : « C'est Nous qui avons fait descendre le Rappel, et c'est Nous qui en sommes les gardiens. » (Coran, 15:9).\n\nLe texte du Coran récité aujourd'hui par les musulmans à travers le monde est exactement le même, mot pour mot, lettre pour lettre, que celui révélé au Prophète ﷺ. Des manuscrits anciens datant des premières décennies de l'Islam (comme le manuscrit de Birmingham ou celui de Sanaa) confirment cette préservation parfaite.",
+  },
+  {
+    id: 624,
+    category: "Les piliers de la foi",
+    pillar: "livres",
+    question: "Comment le Coran a-t-il été préservé jusqu'à aujourd'hui ?",
+    answer: "Le Coran a été préservé par deux moyens complémentaires :\n\n1. La mémorisation (Hifdh) : Dès la révélation, le Prophète ﷺ et ses compagnons mémorisaient chaque verset. Cette tradition s'est perpétuée jusqu'à aujourd'hui : des millions de musulmans à travers le monde (les hâfidh) connaissent l'intégralité du Coran par cœur.\n\n2. L'écriture : Les versets étaient écrits par des scribes du vivant du Prophète ﷺ sur divers supports (parchemins, omoplates, tablettes). Sous le calife Abû Bakr, puis 'Uthmân, le Coran a été compilé en un livre unique (mushaf), dont des copies furent envoyées dans les principales régions musulmanes.\n\nCette double préservation orale et écrite, combinée à la promesse divine, garantit l'authenticité du Coran depuis 14 siècles.",
+  },
 
   // Croire aux Prophètes
   {
@@ -309,6 +351,27 @@ export const faithPillarQuestions: BasicQuestion[] = [
     pillar: "prophetes",
     question: "Quel est le message commun de tous les prophètes ?",
     answer: "Le message commun de tous les prophètes est le Tawhîd : l'appel à adorer Allah seul, sans Lui associer quoi que ce soit. Chaque prophète a dit à son peuple : « Adorez Allah, vous n'avez aucune autre divinité en dehors de Lui. » (Coran, 7:59). Ils ont tous appelé au bien, interdit le mal, et annoncé les bonnes nouvelles du Paradis et l'avertissement de l'Enfer.",
+  },
+  {
+    id: 633,
+    category: "Les piliers de la foi",
+    pillar: "prophetes",
+    question: "Quel est le premier prophète envoyé par Allah ?",
+    answer: "Le premier prophète envoyé par Allah à l'humanité est Adam ('alayhi as-salâm), le père de l'humanité. Allah l'a créé de Ses mains, lui a enseigné les noms de toutes choses, et a ordonné aux anges de se prosterner devant lui. Adam a été envoyé sur terre avec son épouse Hawwâ' (Ève) après leur descente du Paradis, et il a transmis à ses descendants le message du Tawhîd (l'unicité d'Allah).\n\nQuant au premier messager (rasûl) envoyé avec une législation à un peuple égaré, c'est Nûh (Noé) ('alayhi as-salâm), comme l'indique un hadith authentique du Prophète ﷺ.",
+  },
+  {
+    id: 634,
+    category: "Les piliers de la foi",
+    pillar: "prophetes",
+    question: "Les prophètes sont-ils des hommes ordinaires ou des êtres divins ?",
+    answer: "Les prophètes sont des êtres humains, hommes choisis par Allah pour transmettre Son message. Ils ne sont en aucun cas divins, ni des fils de Dieu, ni des anges. Allah dit : « Dis : Je ne suis qu'un être humain comme vous. Il m'a été révélé que votre Dieu est un Dieu unique. » (Coran, 18:110).\n\nIls mangent, boivent, dorment, se marient et meurent comme tout être humain. Cependant, Allah les a distingués par :\n• La révélation (al-Wahy)\n• L'infaillibilité ('isma) dans la transmission du message\n• Une moralité et une piété exemplaires\n• Des miracles confirmant leur véracité\n\nLes adorer ou les diviniser est une grave erreur en Islam.",
+  },
+  {
+    id: 635,
+    category: "Les piliers de la foi",
+    pillar: "prophetes",
+    question: "Doit-on croire en tous les prophètes pour être musulman ?",
+    answer: "Oui, il est obligatoire pour tout musulman de croire en l'ensemble des prophètes envoyés par Allah, sans exception ni distinction. Allah dit : « Nous ne faisons aucune différence entre Ses messagers. » (Coran, 2:285).\n\nRejeter ne serait-ce qu'un seul prophète revient à rejeter Allah Lui-même, car c'est Lui qui les a envoyés. Croire en Muhammad ﷺ implique nécessairement de croire en tous les prophètes qui l'ont précédé : Adam, Noé, Abraham, Moïse, Jésus, et tous les autres (paix sur eux).\n\nC'est ce qui distingue le musulman : il honore et respecte tous les prophètes, sans en privilégier un au détriment des autres.",
   },
 
   // Croire au Jour du Jugement
@@ -333,6 +396,41 @@ export const faithPillarQuestions: BasicQuestion[] = [
     question: "Qu'est-ce que le Paradis et l'Enfer ?",
     answer: "Le Paradis (Janna) est la demeure éternelle de félicité préparée par Allah pour les croyants. On y trouve des bienfaits inimaginables et le plus grand bonheur est de voir le visage d'Allah. L'Enfer (Jahannam) est le châtiment préparé pour les mécréants et les désobéissants. Allah invite l'humanité à œuvrer pour le Paradis et à se préserver de l'Enfer par la foi et les bonnes actions.",
   },
+  {
+    id: 643,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Quelles sont les étapes entre la mort et le Paradis/Enfer ?",
+    answer: "Entre la mort et l'entrée au Paradis ou en Enfer, l'âme traverse plusieurs étapes :\n\n1. La mort (al-Mawt) : l'ange de la mort recueille l'âme.\n2. Le Barzakh : vie intermédiaire dans la tombe, où l'âme est interrogée par les anges Munkar et Nakîr.\n3. La résurrection (al-Ba'th) : Allah ressuscitera tous les êtres humains lors du second souffle dans la trompe par l'ange Isrâfîl.\n4. Le rassemblement (al-Hashr) : tous les êtres humains seront rassemblés sur la Terre du Rassemblement, nus et pieds nus.\n5. Le jugement (al-Hisâb) : chacun rendra compte de ses actes devant Allah.\n6. La pesée (al-Mîzân) : les bonnes et mauvaises actions seront pesées sur la balance.\n7. La traversée du Sirât : un pont au-dessus de l'Enfer que chacun devra emprunter.\n8. L'entrée finale au Paradis ou en Enfer.",
+  },
+  {
+    id: 644,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Qu'est-ce que le Barzakh (vie dans la tombe) ?",
+    answer: "Le Barzakh est la vie intermédiaire qui sépare la mort de la résurrection. Le mot « Barzakh » signifie littéralement « barrière ». Allah dit : « Et derrière eux, il y a une barrière (Barzakh), jusqu'au jour où ils seront ressuscités. » (Coran, 23:100).\n\nDans la tombe, deux anges (Munkar et Nakîr) interrogent le défunt sur :\n• Son Seigneur : « Qui est ton Seigneur ? »\n• Sa religion : « Quelle est ta religion ? »\n• Son prophète : « Qui est ton prophète ? »\n\nLe croyant répond avec aisance et sa tombe devient un jardin du Paradis. Le mécréant ou le pécheur ne peut répondre, et sa tombe devient un châtiment. Cette vie du Barzakh dure jusqu'au Jour de la Résurrection.",
+  },
+  {
+    id: 645,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Qu'est-ce que la résurrection (Al-Ba'th) ?",
+    answer: "La résurrection (al-Ba'th) est le moment où Allah ressuscitera tous les êtres humains depuis Adam jusqu'au dernier-né, après que l'ange Isrâfîl aura soufflé une seconde fois dans la trompe (as-Sûr). Tous sortiront de leurs tombes, vivants à nouveau, dans leur corps recréé.\n\nAllah dit : « Puis, on soufflera de nouveau dans la trompe, et les voilà debout à regarder. » (Coran, 39:68).\n\nLes humains seront rassemblés sur la Terre du Rassemblement (Ard al-Mahshar), nus, pieds nus et non circoncis, comme ils sont venus au monde. C'est là qu'ils attendront leur jugement devant Allah. Croire en la résurrection est un fondement essentiel de la foi musulmane.",
+  },
+  {
+    id: 646,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Qu'est-ce que Al-Mizan (la balance des actes) ?",
+    answer: "Al-Mîzân est la balance véritable qu'Allah dressera le Jour du Jugement pour peser les actes des serviteurs avec une justice parfaite. Allah dit : « Au Jour de la Résurrection, Nous placerons les balances exactes. Nulle âme ne sera lésée en rien, fût-ce du poids d'un grain de moutarde. » (Coran, 21:47).\n\nSur cette balance seront pesés :\n• Les bonnes actions d'un côté\n• Les mauvaises actions de l'autre\n\nCelui dont les bonnes actions pèsent plus lourd sera sauvé et entrera au Paradis. Celui dont les mauvaises actions pèsent plus lourd sera en perdition, sauf si Allah lui pardonne par Sa miséricorde. C'est pourquoi le musulman est invité à multiplier les bonnes actions, même petites, car elles peuvent faire pencher la balance.",
+  },
+  {
+    id: 647,
+    category: "Les piliers de la foi",
+    pillar: "jugement",
+    question: "Qu'est-ce que le Sirat (le pont au-dessus de l'Enfer) ?",
+    answer: "Le Sirât est un pont dressé au-dessus de l'Enfer que tous les êtres humains devront traverser pour atteindre le Paradis. Selon les hadiths, il est plus fin qu'un cheveu et plus tranchant qu'une épée.\n\nChaque personne le traversera à une vitesse correspondant à ses œuvres :\n• Certains le franchiront aussi vite que l'éclair\n• D'autres comme le vent\n• D'autres au galop d'un cheval\n• D'autres en marchant\n• D'autres en rampant\n• Certains tomberont en Enfer à cause de leurs péchés\n\nLe Prophète ﷺ a dit qu'il sera le premier à traverser ce pont avec sa communauté. Sur le Sirât, il y a des crochets qui saisiront ceux qu'Allah a destinés au châtiment. Ceux qui réussiront à le traverser entreront au Paradis pour l'éternité.",
+  },
 
   // Croire au Destin
   {
@@ -355,6 +453,34 @@ export const faithPillarQuestions: BasicQuestion[] = [
     pillar: "destin",
     question: "Comment réagir face aux épreuves selon l'Islam ?",
     answer: "Face aux épreuves, le musulman doit :\n\n• Faire preuve de patience (sabr) et accepter le décret d'Allah\n• Se rappeler que les épreuves sont un moyen de purification des péchés\n• Invoquer Allah et chercher Son aide\n• Ne pas se plaindre du destin d'Allah\n\nLe Prophète ﷺ a dit : « L'affaire du croyant est étonnante, tout est un bien pour lui : s'il lui arrive un bonheur, il remercie et c'est un bien ; s'il lui arrive un malheur, il patiente et c'est un bien. » (Rapporté par Muslim)",
+  },
+  {
+    id: 653,
+    category: "Les piliers de la foi",
+    pillar: "destin",
+    question: "Allah connaît-il tout ce qui va se passer avant que cela arrive ?",
+    answer: "Oui, Allah connaît absolument tout ce qui s'est passé, ce qui se passe et ce qui se passera, de toute éternité, sans le moindre commencement ni fin à Sa science. C'est ce que les savants appellent « al-'Ilm al-Azalî » (la science éternelle d'Allah).\n\nAllah dit : « Les clés de l'Inconnaissable sont auprès de Lui ; Lui seul les connaît. Et Il sait ce qui est dans la terre ferme, comme dans la mer. Et pas une feuille ne tombe qu'Il ne le sache. Il n'y a pas une graine dans les ténèbres de la terre, ni rien de frais ou de sec, qui ne soit consigné dans un livre explicite. » (Coran, 6:59).\n\nSa connaissance englobe le passé, le présent, le futur, ainsi que tout ce qui aurait pu arriver mais qui n'arrivera pas. C'est l'un des fondements essentiels de la foi au Qadar.",
+  },
+  {
+    id: 654,
+    category: "Les piliers de la foi",
+    pillar: "destin",
+    question: "Tout ce qui nous arrive dans la vie est-il écrit par Allah ?",
+    answer: "Oui, tout ce qui se produit dans l'univers — du plus grand événement à la plus petite feuille qui tombe — est écrit par Allah dans la Table Préservée (al-Lawh al-Mahfûdh) avant même la création des cieux et de la terre.\n\nLe Prophète ﷺ a dit : « Allah a écrit les destinées des créatures cinquante mille ans avant qu'Il ne crée les cieux et la terre. » (Rapporté par Muslim).\n\nCela inclut :\n• Notre durée de vie (al-'umr)\n• Notre subsistance (ar-rizq)\n• Nos actes (a'mâl)\n• Notre fin : heureuse ou malheureuse (sa'îd ou shaqî)\n\nMais cela ne signifie pas que l'homme est forcé d'agir : il fait ses choix librement, et Allah, par Sa science éternelle, sait à l'avance ce qu'il choisira.",
+  },
+  {
+    id: 655,
+    category: "Les piliers de la foi",
+    pillar: "destin",
+    question: "À quel moment notre destin est-il écrit ?",
+    answer: "Le destin de chaque être humain est écrit à plusieurs niveaux :\n\n1. L'écriture éternelle dans la Table Préservée (al-Lawh al-Mahfûdh), 50 000 ans avant la création des cieux et de la terre.\n\n2. L'écriture lors du pacte primordial : quand Allah a fait sortir des reins d'Adam toute sa descendance et leur a fait témoigner de Son unicité.\n\n3. L'écriture dans le ventre de la mère : après 120 jours de gestation, Allah envoie un ange qui écrit quatre choses pour le fœtus :\n   • Sa subsistance (rizq)\n   • Sa durée de vie (ajal)\n   • Ses actes (a'mâl)\n   • S'il sera heureux ou malheureux\n\n4. L'écriture annuelle lors de la nuit du Destin (Laylat al-Qadr), où sont décrétés les événements de l'année à venir.\n\nMalgré tout cela, l'invocation et les bonnes actions peuvent influer sur le destin par la volonté d'Allah.",
+  },
+  {
+    id: 656,
+    category: "Les piliers de la foi",
+    pillar: "destin",
+    question: "Qu'est-ce que la Sabr (patience) face aux épreuves liées au destin ?",
+    answer: "La Sabr (patience) est l'une des plus grandes qualités du musulman. Elle consiste à :\n\n• Retenir l'âme de se révolter contre le décret d'Allah\n• Retenir la langue de se plaindre\n• Retenir les membres de tout acte d'impatience (se frapper, déchirer ses vêtements, etc.)\n\nLes savants distinguent trois types de patience :\n1. La patience dans l'obéissance à Allah\n2. La patience face à l'interdit (s'abstenir des péchés)\n3. La patience face aux épreuves et au décret divin\n\nAllah dit : « Annonce la bonne nouvelle aux endurants, qui disent, quand un malheur les atteint : Certes, nous sommes à Allah, et c'est à Lui que nous retournerons. » (Coran, 2:155-156).\n\nLa récompense de la patience est immense : « Les endurants seront récompensés sans compter. » (Coran, 39:10). Le croyant patient sait que toute épreuve est une purification, une élévation de degré, ou un test de sa foi.",
   },
 ];
 
