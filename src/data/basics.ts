@@ -248,6 +248,27 @@ export const faithPillarQuestions: BasicQuestion[] = [
     question: "Comment connaît-on Allah ?",
     answer: "On connaît Allah à travers :\n\n• Ses signes dans la création (l'univers, la nature, le corps humain)\n• Ses noms et attributs mentionnés dans le Coran et la Sunna\n• Ses livres révélés, en particulier le Coran\n• La réflexion et la méditation sur Ses bienfaits\n\nAllah dit : « En vérité, dans la création des cieux et de la terre, il y a certes des signes pour les doués d'intelligence. » (Coran, 3:190)",
   },
+  {
+    id: 603,
+    category: "Les piliers de la foi",
+    pillar: "allah",
+    question: "Qu'est-ce que le Shirk (l'association) et pourquoi est-ce le péché le plus grave ?",
+    answer: "Le Shirk consiste à associer à Allah une autre divinité ou à attribuer à une créature ce qui n'appartient qu'à Lui (l'adoration, la souveraineté absolue, la connaissance de l'invisible, etc.). C'est le péché le plus grave en Islam car il contredit la raison même de la création : adorer Allah seul. Allah dit : « Certes, Allah ne pardonne pas qu'on Lui donne des associés. À part cela, Il pardonne à qui Il veut. » (Coran, 4:48). Celui qui meurt sur le Shirk sans s'en repentir n'entrera pas au Paradis.",
+  },
+  {
+    id: 604,
+    category: "Les piliers de la foi",
+    pillar: "allah",
+    question: "Quelle est la différence entre Allah et les dieux des autres religions ?",
+    answer: "Allah est le Dieu unique, sans associé, sans enfant, sans père et sans semblable. Il n'a pas de forme humaine ni de représentation matérielle. Il dit dans le Coran : « Il n'y a rien qui Lui ressemble ; et c'est Lui l'Audient, le Clairvoyant. » (Coran, 42:11).\n\nContrairement à de nombreuses divinités d'autres religions, Allah :\n• N'est pas multiple (pas de trinité ni de panthéon)\n• N'a pas de représentation visuelle (statues, images)\n• Ne s'incarne pas dans une créature\n• N'a aucun besoin de Sa création\n\nC'est le même Dieu qui a envoyé tous les prophètes (Noé, Abraham, Moïse, Jésus, Muhammad…), mais avec un message purifié de toute altération.",
+  },
+  {
+    id: 605,
+    category: "Les piliers de la foi",
+    pillar: "allah",
+    question: "Allah a-t-il une forme ou un corps ?",
+    answer: "Allah n'est comparable à rien de Sa création. Il possède des attributs qui Lui sont propres et qui sont mentionnés dans le Coran et la Sunna (comme Son Visage, Ses Mains, Son élévation au-dessus du Trône), mais nous y croyons sans les comparer à ceux des créatures, sans les nier, sans les modifier et sans en chercher la modalité.\n\nLa règle des savants de l'Ahl as-Sunna est : « Rien ne Lui ressemble, et Il est l'Audient, le Clairvoyant » (Coran 42:11). Ainsi, on affirme ce qu'Allah a affirmé sur Lui-même, tout en étant certain qu'Il ne ressemble à aucune de Ses créatures et qu'Il n'a ni corps matériel ni forme imaginable par l'esprit humain.",
+  },
 
   // Croire aux Anges
   {
