@@ -352,6 +352,27 @@ export const faithPillarQuestions: BasicQuestion[] = [
     question: "Quel est le message commun de tous les prophètes ?",
     answer: "Le message commun de tous les prophètes est le Tawhîd : l'appel à adorer Allah seul, sans Lui associer quoi que ce soit. Chaque prophète a dit à son peuple : « Adorez Allah, vous n'avez aucune autre divinité en dehors de Lui. » (Coran, 7:59). Ils ont tous appelé au bien, interdit le mal, et annoncé les bonnes nouvelles du Paradis et l'avertissement de l'Enfer.",
   },
+  {
+    id: 633,
+    category: "Les piliers de la foi",
+    pillar: "prophetes",
+    question: "Quel est le premier prophète envoyé par Allah ?",
+    answer: "Le premier prophète envoyé par Allah à l'humanité est Adam ('alayhi as-salâm), le père de l'humanité. Allah l'a créé de Ses mains, lui a enseigné les noms de toutes choses, et a ordonné aux anges de se prosterner devant lui. Adam a été envoyé sur terre avec son épouse Hawwâ' (Ève) après leur descente du Paradis, et il a transmis à ses descendants le message du Tawhîd (l'unicité d'Allah).\n\nQuant au premier messager (rasûl) envoyé avec une législation à un peuple égaré, c'est Nûh (Noé) ('alayhi as-salâm), comme l'indique un hadith authentique du Prophète ﷺ.",
+  },
+  {
+    id: 634,
+    category: "Les piliers de la foi",
+    pillar: "prophetes",
+    question: "Les prophètes sont-ils des hommes ordinaires ou des êtres divins ?",
+    answer: "Les prophètes sont des êtres humains, hommes choisis par Allah pour transmettre Son message. Ils ne sont en aucun cas divins, ni des fils de Dieu, ni des anges. Allah dit : « Dis : Je ne suis qu'un être humain comme vous. Il m'a été révélé que votre Dieu est un Dieu unique. » (Coran, 18:110).\n\nIls mangent, boivent, dorment, se marient et meurent comme tout être humain. Cependant, Allah les a distingués par :\n• La révélation (al-Wahy)\n• L'infaillibilité ('isma) dans la transmission du message\n• Une moralité et une piété exemplaires\n• Des miracles confirmant leur véracité\n\nLes adorer ou les diviniser est une grave erreur en Islam.",
+  },
+  {
+    id: 635,
+    category: "Les piliers de la foi",
+    pillar: "prophetes",
+    question: "Doit-on croire en tous les prophètes pour être musulman ?",
+    answer: "Oui, il est obligatoire pour tout musulman de croire en l'ensemble des prophètes envoyés par Allah, sans exception ni distinction. Allah dit : « Nous ne faisons aucune différence entre Ses messagers. » (Coran, 2:285).\n\nRejeter ne serait-ce qu'un seul prophète revient à rejeter Allah Lui-même, car c'est Lui qui les a envoyés. Croire en Muhammad ﷺ implique nécessairement de croire en tous les prophètes qui l'ont précédé : Adam, Noé, Abraham, Moïse, Jésus, et tous les autres (paix sur eux).\n\nC'est ce qui distingue le musulman : il honore et respecte tous les prophètes, sans en privilégier un au détriment des autres.",
+  },
 
   // Croire au Jour du Jugement
   {
