@@ -454,6 +454,34 @@ export const faithPillarQuestions: BasicQuestion[] = [
     question: "Comment réagir face aux épreuves selon l'Islam ?",
     answer: "Face aux épreuves, le musulman doit :\n\n• Faire preuve de patience (sabr) et accepter le décret d'Allah\n• Se rappeler que les épreuves sont un moyen de purification des péchés\n• Invoquer Allah et chercher Son aide\n• Ne pas se plaindre du destin d'Allah\n\nLe Prophète ﷺ a dit : « L'affaire du croyant est étonnante, tout est un bien pour lui : s'il lui arrive un bonheur, il remercie et c'est un bien ; s'il lui arrive un malheur, il patiente et c'est un bien. » (Rapporté par Muslim)",
   },
+  {
+    id: 653,
+    category: "Les piliers de la foi",
+    pillar: "destin",
+    question: "Allah connaît-il tout ce qui va se passer avant que cela arrive ?",
+    answer: "Oui, Allah connaît absolument tout ce qui s'est passé, ce qui se passe et ce qui se passera, de toute éternité, sans le moindre commencement ni fin à Sa science. C'est ce que les savants appellent « al-'Ilm al-Azalî » (la science éternelle d'Allah).\n\nAllah dit : « Les clés de l'Inconnaissable sont auprès de Lui ; Lui seul les connaît. Et Il sait ce qui est dans la terre ferme, comme dans la mer. Et pas une feuille ne tombe qu'Il ne le sache. Il n'y a pas une graine dans les ténèbres de la terre, ni rien de frais ou de sec, qui ne soit consigné dans un livre explicite. » (Coran, 6:59).\n\nSa connaissance englobe le passé, le présent, le futur, ainsi que tout ce qui aurait pu arriver mais qui n'arrivera pas. C'est l'un des fondements essentiels de la foi au Qadar.",
+  },
+  {
+    id: 654,
+    category: "Les piliers de la foi",
+    pillar: "destin",
+    question: "Tout ce qui nous arrive dans la vie est-il écrit par Allah ?",
+    answer: "Oui, tout ce qui se produit dans l'univers — du plus grand événement à la plus petite feuille qui tombe — est écrit par Allah dans la Table Préservée (al-Lawh al-Mahfûdh) avant même la création des cieux et de la terre.\n\nLe Prophète ﷺ a dit : « Allah a écrit les destinées des créatures cinquante mille ans avant qu'Il ne crée les cieux et la terre. » (Rapporté par Muslim).\n\nCela inclut :\n• Notre durée de vie (al-'umr)\n• Notre subsistance (ar-rizq)\n• Nos actes (a'mâl)\n• Notre fin : heureuse ou malheureuse (sa'îd ou shaqî)\n\nMais cela ne signifie pas que l'homme est forcé d'agir : il fait ses choix librement, et Allah, par Sa science éternelle, sait à l'avance ce qu'il choisira.",
+  },
+  {
+    id: 655,
+    category: "Les piliers de la foi",
+    pillar: "destin",
+    question: "À quel moment notre destin est-il écrit ?",
+    answer: "Le destin de chaque être humain est écrit à plusieurs niveaux :\n\n1. L'écriture éternelle dans la Table Préservée (al-Lawh al-Mahfûdh), 50 000 ans avant la création des cieux et de la terre.\n\n2. L'écriture lors du pacte primordial : quand Allah a fait sortir des reins d'Adam toute sa descendance et leur a fait témoigner de Son unicité.\n\n3. L'écriture dans le ventre de la mère : après 120 jours de gestation, Allah envoie un ange qui écrit quatre choses pour le fœtus :\n   • Sa subsistance (rizq)\n   • Sa durée de vie (ajal)\n   • Ses actes (a'mâl)\n   • S'il sera heureux ou malheureux\n\n4. L'écriture annuelle lors de la nuit du Destin (Laylat al-Qadr), où sont décrétés les événements de l'année à venir.\n\nMalgré tout cela, l'invocation et les bonnes actions peuvent influer sur le destin par la volonté d'Allah.",
+  },
+  {
+    id: 656,
+    category: "Les piliers de la foi",
+    pillar: "destin",
+    question: "Qu'est-ce que la Sabr (patience) face aux épreuves liées au destin ?",
+    answer: "La Sabr (patience) est l'une des plus grandes qualités du musulman. Elle consiste à :\n\n• Retenir l'âme de se révolter contre le décret d'Allah\n• Retenir la langue de se plaindre\n• Retenir les membres de tout acte d'impatience (se frapper, déchirer ses vêtements, etc.)\n\nLes savants distinguent trois types de patience :\n1. La patience dans l'obéissance à Allah\n2. La patience face à l'interdit (s'abstenir des péchés)\n3. La patience face aux épreuves et au décret divin\n\nAllah dit : « Annonce la bonne nouvelle aux endurants, qui disent, quand un malheur les atteint : Certes, nous sommes à Allah, et c'est à Lui que nous retournerons. » (Coran, 2:155-156).\n\nLa récompense de la patience est immense : « Les endurants seront récompensés sans compter. » (Coran, 39:10). Le croyant patient sait que toute épreuve est une purification, une élévation de degré, ou un test de sa foi.",
+  },
 ];
 
 export const basicsQuestions: BasicQuestion[] = [
