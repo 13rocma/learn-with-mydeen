@@ -308,6 +308,27 @@ export const faithPillarQuestions: BasicQuestion[] = [
     question: "Pourquoi le Coran est-il spécial par rapport aux autres livres ?",
     answer: "Le Coran est spécial car :\n\n• Il est le dernier livre révélé par Allah\n• Il est préservé dans sa forme originale depuis plus de 1400 ans, comme Allah l'a promis : « C'est Nous qui avons fait descendre le Rappel, et c'est Nous qui en sommes les gardiens. » (Coran, 15:9)\n• Il s'adresse à toute l'humanité, pas seulement à un peuple\n• Il abroge les législations des livres précédents\n• Il est inimitable dans son style et son contenu",
   },
+  {
+    id: 622,
+    category: "Les piliers de la foi",
+    pillar: "livres",
+    question: "Qu'est-ce que la Tahrif (falsification des anciens livres) ?",
+    answer: "La Tahrif désigne l'altération ou la falsification subie par les livres révélés avant le Coran (Torah, Évangile, etc.). Cette altération a pu prendre plusieurs formes :\n\n• Modification du texte (ajouts, suppressions, changements de mots)\n• Mauvaise interprétation du sens d'origine\n• Perte de certains passages au fil des siècles\n\nAllah mentionne cela dans le Coran : « Certains parmi les juifs altèrent les paroles de leurs places. » (Coran, 4:46). C'est l'une des raisons pour lesquelles Allah a envoyé le Coran : pour rétablir le message original et le préserver jusqu'à la fin des temps. Les musulmans respectent les livres précédents dans leur forme originelle révélée, mais suivent uniquement le Coran comme référence.",
+  },
+  {
+    id: 623,
+    category: "Les piliers de la foi",
+    pillar: "livres",
+    question: "Le Coran a-t-il été modifié depuis sa révélation ?",
+    answer: "Non, le Coran n'a subi aucune modification depuis sa révélation au Prophète Muhammad ﷺ il y a plus de 1400 ans. Allah Lui-même s'est engagé à le préserver : « C'est Nous qui avons fait descendre le Rappel, et c'est Nous qui en sommes les gardiens. » (Coran, 15:9).\n\nLe texte du Coran récité aujourd'hui par les musulmans à travers le monde est exactement le même, mot pour mot, lettre pour lettre, que celui révélé au Prophète ﷺ. Des manuscrits anciens datant des premières décennies de l'Islam (comme le manuscrit de Birmingham ou celui de Sanaa) confirment cette préservation parfaite.",
+  },
+  {
+    id: 624,
+    category: "Les piliers de la foi",
+    pillar: "livres",
+    question: "Comment le Coran a-t-il été préservé jusqu'à aujourd'hui ?",
+    answer: "Le Coran a été préservé par deux moyens complémentaires :\n\n1. La mémorisation (Hifdh) : Dès la révélation, le Prophète ﷺ et ses compagnons mémorisaient chaque verset. Cette tradition s'est perpétuée jusqu'à aujourd'hui : des millions de musulmans à travers le monde (les hâfidh) connaissent l'intégralité du Coran par cœur.\n\n2. L'écriture : Les versets étaient écrits par des scribes du vivant du Prophète ﷺ sur divers supports (parchemins, omoplates, tablettes). Sous le calife Abû Bakr, puis 'Uthmân, le Coran a été compilé en un livre unique (mushaf), dont des copies furent envoyées dans les principales régions musulmanes.\n\nCette double préservation orale et écrite, combinée à la promesse divine, garantit l'authenticité du Coran depuis 14 siècles.",
+  },
 
   // Croire aux Prophètes
   {
