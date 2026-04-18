@@ -364,7 +364,7 @@ export const faithPillarQuestions: BasicQuestion[] = [
     category: "Les piliers de la foi",
     pillar: "prophetes",
     question: "Les prophètes sont-ils des hommes ordinaires ou des êtres divins ?",
-    answer: "Les prophètes sont des êtres humains, hommes choisis par Allah pour transmettre Son message. Ils ne sont en aucun cas divins, ni des fils de Dieu, ni des anges. Allah dit : « Dis : Je ne suis qu'un être humain comme vous. Il m'a été révélé que votre Dieu est un Dieu unique. » (Coran, 18:110).\n\nIls mangent, boivent, dorment, se marient et meurent comme tout être humain. Cependant, Allah les a distingués par :\n• La révélation (al-Wahy)\n• L'infaillibilité ('isma) dans la transmission du message\n• Une moralité et une piété exemplaires\n• Des miracles confirmant leur véracité\n\nLes adorer ou les diviniser est une grave erreur en Islam.",
+    answer: "Les prophètes sont des êtres humains, hommes choisis par Allah pour transmettre Son message. Ils ne sont en aucun cas divins, ni des fils de Dieu, ni des anges.\n\nAllah ordonne au Prophète ﷺ de dire : « Je ne suis qu'un homme comme vous, auquel il est révélé que votre Dieu est un Dieu unique. Que celui donc qui espère rencontrer son Seigneur accomplisse de bonnes œuvres et n'associe nulle divinité au culte de son Seigneur. » (Coran, 18:110)\n\nIls mangent, boivent, dorment, se marient et meurent comme tout être humain. Cependant, Allah les a distingués par :\n• La révélation (al-Wahy)\n• L'infaillibilité ('isma) dans la transmission du message\n• Une moralité et une piété exemplaires\n• Des miracles confirmant leur véracité\n\nLes adorer ou les diviniser est une grave erreur en Islam.",
   },
   {
     id: 635,
