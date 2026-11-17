@@ -5,6 +5,7 @@ import PrayerAnimation from "@/components/PrayerAnimation";
 import { usePrayerAudio } from "@/hooks/usePrayerAudio";
 import { Play, Pause, SkipForward, SkipBack, RotateCcw, ChevronRight, Volume2, VolumeX, Droplets, ArrowLeft, ArrowRight } from "lucide-react";
 import PageHeroBanner from "@/components/PageHeroBanner";
+import PrayerStepTexts from "@/components/PrayerStepTexts";
 
 type View = "menu" | "prayer" | "ablutions";
 
@@ -16,6 +17,7 @@ const PrayerGuide = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioEnabled, setAudioEnabled] = useState(true);
   const [ablutionStep, setAblutionStep] = useState(0);
+  const [visibleTexts, setVisibleTexts] = useState<string[]>(["phonetic"]);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { playStepAudio, stopAudio, pauseAudio, resumeAudio, isAudioPlaying } = usePrayerAudio();
 
@@ -303,22 +305,7 @@ const PrayerGuide = () => {
                 <h3 className="font-heading text-lg font-semibold mb-1">{step.name}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{step.description}</p>
               </div>
-              {(step.arabic || step.phonetic || step.translation) && (
-                <div className="bg-muted/50 rounded-lg p-5 space-y-3">
-                  {step.phonetic && (
-                    <p className="phonetic-text text-center text-base font-semibold">{step.phonetic}</p>
-                  )}
-                  {step.arabic && (
-                    <p className="arabic-text text-center text-xl leading-loose">{step.arabic}</p>
-                  )}
-                  {step.translation && (
-                    <p className="text-center text-sm text-muted-foreground">{step.translation}</p>
-                  )}
-                  {step.repeat && (
-                    <p className="text-center text-xs text-primary font-medium">× {step.repeat} fois</p>
-                  )}
-                </div>
-              )}
+              <PrayerStepTexts step={step} visibleTexts={visibleTexts} onVisibleTextsChange={setVisibleTexts} />
             </div>
 
             <div className="flex items-center justify-center gap-4 mt-6">
