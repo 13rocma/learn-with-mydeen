@@ -57,7 +57,7 @@ export function getStepAudioType(stepName: string): PrayerAudioType {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.qawmah };
   }
   if (lower.includes("assise entre")) {
-    return { kind: "recorded", file: PRAYER_AUDIO_FILES.takbir };
+    return { kind: "recorded", file: PRAYER_AUDIO_FILES.jalsah };
   }
   if (lower.includes("prosternation") || lower.includes("sujûd")) {
     return { kind: "recorded", file: PRAYER_AUDIO_FILES.sajdah };
@@ -85,14 +85,16 @@ export function usePrayerAudio() {
   const queueRef = useRef<string[]>([]);
   const queueIndexRef = useRef(0);
   const activeTypeRef = useRef<"quran" | "tts" | "none">("none");
+  const sessionRef = useRef(0); // invalide les événements d'une lecture précédente
 
   const stopAudio = useCallback(() => {
     isPausedRef.current = false;
     activeTypeRef.current = "none";
+    sessionRef.current += 1;
     if (audioRef.current) {
-      audioRef.current.pause();
       audioRef.current.onended = null;
-      audioRef.current.src = "";
+      audioRef.current.onerror = null;
+      audioRef.current.pause();
     }
     queueRef.current = [];
     queueIndexRef.current = 0;
@@ -117,9 +119,11 @@ export function usePrayerAudio() {
 
   useEffect(() => {
     return () => {
+      sessionRef.current += 1;
       if (audioRef.current) {
+        audioRef.current.onended = null;
+        audioRef.current.onerror = null;
         audioRef.current.pause();
-        audioRef.current.src = "";
       }
     };
   }, []);
@@ -127,8 +131,10 @@ export function usePrayerAudio() {
   const playAudioQueue = useCallback((urls: string[], onDone: () => void) => {
     queueRef.current = urls;
     queueIndexRef.current = 0;
+    const session = sessionRef.current;
 
     const playNextUrl = () => {
+      if (session !== sessionRef.current) return; // lecture périmée
       if (isPausedRef.current) return;
       const idx = queueIndexRef.current;
       if (idx >= queueRef.current.length) {
@@ -138,16 +144,22 @@ export function usePrayerAudio() {
       }
       if (!audioRef.current) audioRef.current = new Audio();
       const audio = audioRef.current;
-      audio.src = queueRef.current[idx];
-      audio.onended = () => {
+      const skip = () => {
+        if (session !== sessionRef.current) return;
         queueIndexRef.current += 1;
         playNextUrl();
       };
+      audio.onended = skip;
       audio.onerror = () => {
-        queueIndexRef.current += 1;
-        playNextUrl();
+        console.error("Erreur audio :", queueRef.current[idx]);
+        skip();
       };
-      audio.play().catch(console.error);
+      audio.src = queueRef.current[idx];
+      audio.play().catch((err) => {
+        console.error(err);
+        // Lecture refusée par le navigateur : on passe à la suite au lieu de rester bloqué
+        if (err && err.name !== "AbortError") skip();
+      });
     };
 
     setIsAudioPlaying(true);
