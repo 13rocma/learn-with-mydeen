@@ -63,7 +63,7 @@ export default function AuthPage() {
       if (!valid.success) { setError(valid.error.issues[0].message); return; }
       setBusy(true);
       try {
-        const { error } = await supabase.auth.signInWithPassword(valid.data);
+        const { error } = await supabase.auth.signInWithPassword({ email: valid.data.email, password: valid.data.password });
         if (error) setError(authError(error));
       } catch { setError("Connexion impossible. Vérifiez votre connexion internet."); }
       finally { setBusy(false); }
