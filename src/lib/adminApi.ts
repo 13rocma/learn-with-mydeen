@@ -23,6 +23,9 @@ export const fetchOverview = () => rpc<Overview>("admin_overview");
 export const fetchDaily = (days: number) => rpc<DailyRow[]>("admin_daily", { _days: days });
 export const fetchPages = (days: number) => rpc<PageRow[]>("admin_pages", { _days: days });
 export const fetchActivity = (days: number) => rpc<ActivityRow[]>("admin_activity", { _days: days });
+export const fetchBanned = async () => (await rpc<{ uid: string }[]>("admin_banned")).map((r) => r.uid);
+export const banUser = (id: string, ban: boolean) => rpc<null>("admin_set_ban", { _user: id, _ban: ban });
+export const deleteUser = (id: string) => rpc<null>("admin_delete_user", { _user: id });
 export async function fetchProfiles(): Promise<ProfileRow[]> {
   const { data, error } = await db.from("profiles").select("id,email,prenom,marketing_consent,created_at,last_seen_at").order("created_at", { ascending: false }).limit(5000);
   if (error) throw error;

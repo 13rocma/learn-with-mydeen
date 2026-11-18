@@ -1,20 +1,24 @@
 import { useMemo, useState } from "react";
 import { Navigate } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
 import { format } from "date-fns";
 import { Bar, BarChart, CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { ArrowDown, ArrowUp, Download, LoaderCircle, Search } from "lucide-react";
+import { ArrowDown, ArrowUp, Download, LoaderCircle, Search, Trash2 } from "lucide-react";
 import PageHeroBanner from "@/components/PageHeroBanner";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/contexts/AuthContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useIsAdmin } from "@/hooks/useIsAdmin";
-import { fetchActivity, fetchDaily, fetchOverview, fetchPages, fetchProfiles } from "@/lib/adminApi";
+import { banUser, deleteUser, fetchActivity, fetchBanned, fetchDaily, fetchOverview, fetchPages, fetchProfiles } from "@/lib/adminApi";
 
 const PERIODS = [{ d: 7, label: "7 jours" }, { d: 30, label: "30 jours" }, { d: 90, label: "90 jours" }];
 const PAGE_NAMES: Record<string, string> = { "/bases": "Les Bases", "/priere": "La Prière", "/sourates": "Les Sourates", "/alphabet": "L'Alphabet", "/duas": "Les Invocations", "/ablutions": "Les Ablutions", "/installer": "Installation" };
 const PAGE_SIZE = 20;
+type Confirm = { kind: "ban" | "unban" | "delete"; id: string; label: string };
 type SortKey = "prenom" | "email" | "created_at" | "last_seen_at" | "visits" | "marketing_consent";
 
 const fmtDate = (v: string | null) => (v ? format(new Date(v), "dd/MM/yyyy HH:mm") : "—");
@@ -27,6 +31,9 @@ function Stat({ label, value, hint }: { label: string; value: string | number; h
 
 export default function AdminPage() {
   const { isAdmin, loading } = useIsAdmin();
+  const { user } = useAuth();
+  const qc = useQueryClient();
+  const [confirm, setConfirm] = useState<Confirm | null>(null);
   const [days, setDays] = useState(7);
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<{ key: SortKey; dir: "asc" | "desc" }>({ key: "created_at", dir: "desc" });
@@ -37,12 +44,23 @@ export default function AdminPage() {
   const daily = useQuery({ queryKey: ["adm-daily", days], queryFn: () => fetchDaily(days), ...on });
   const pages = useQuery({ queryKey: ["adm-pages", days], queryFn: () => fetchPages(days), ...on });
   const activity = useQuery({ queryKey: ["adm-activity", days], queryFn: () => fetchActivity(days), ...on });
+  const banned = useQuery({ queryKey: ["adm-banned"], queryFn: fetchBanned, ...on });
+  const act = useMutation({
+    mutationFn: (c: Confirm) => (c.kind === "delete" ? deleteUser(c.id) : banUser(c.id, c.kind === "ban")),
+    onSuccess: (_d, c) => {
+      toast.success(c.kind === "delete" ? "Compte supprimé." : c.kind === "ban" ? "Compte banni." : "Compte débanni.");
+      qc.invalidateQueries({ predicate: (q) => String(q.queryKey[0]).startsWith("adm-") });
+    },
+    onError: (e: unknown) => toast.error((e as { message?: string })?.message || "Action impossible."),
+    onSettled: () => setConfirm(null),
+  });
   const profiles = useQuery({ queryKey: ["adm-profiles"], queryFn: fetchProfiles, ...on });
 
   const rows = useMemo(() => {
-    const act = new Map((activity.data ?? []).map((a) => [a.uid, a.visits]));
+    const visitsBy = new Map((activity.data ?? []).map((a) => [a.uid, a.visits]));
+    const bannedSet = new Set(banned.data ?? []);
     const q = search.trim().toLowerCase();
-    const list = (profiles.data ?? []).map((p) => ({ ...p, visits: act.get(p.id) ?? 0 }))
+    const list = (profiles.data ?? []).map((p) => ({ ...p, visits: visitsBy.get(p.id) ?? 0, banned: bannedSet.has(p.id) }))
       .filter((p) => !q || p.email.toLowerCase().includes(q) || p.prenom.toLowerCase().includes(q));
     const { key, dir } = sort;
     list.sort((a, b) => {
@@ -51,7 +69,7 @@ export default function AdminPage() {
       return dir === "asc" ? c : -c;
     });
     return list;
-  }, [profiles.data, activity.data, search, sort]);
+  }, [profiles.data, activity.data, banned.data, search, sort]);
 
   if (loading) return <div role="status" aria-label="Chargement" className="min-h-screen flex items-center justify-center"><LoaderCircle className="h-6 w-6 animate-spin text-primary" /></div>;
   if (!isAdmin) return <Navigate to="/bases" replace />;
@@ -68,8 +86,8 @@ export default function AdminPage() {
     <TableHead><button type="button" className="inline-flex items-center gap-1 font-medium hover:text-foreground" onClick={() => toggleSort(key)}>{label}{sort.key === key && (sort.dir === "asc" ? <ArrowUp className="h-3 w-3" /> : <ArrowDown className="h-3 w-3" />)}</button></TableHead>
   );
   const exportCsv = () => {
-    const lines = [["Prénom", "Email", "Inscrit le", "Dernière connexion", `Visites (${days} j)`, "Accepte les emails"].map(csvCell).join(";")];
-    rows.forEach((r) => lines.push([r.prenom, r.email, fmtDate(r.created_at), fmtDate(r.last_seen_at), r.visits, r.marketing_consent ? "Oui" : "Non"].map(csvCell).join(";")));
+    const lines = [["Prénom", "Email", "Inscrit le", "Dernière connexion", `Visites (${days} j)`, "Accepte les emails", "Statut"].map(csvCell).join(";")];
+    rows.forEach((r) => lines.push([r.prenom, r.email, fmtDate(r.created_at), fmtDate(r.last_seen_at), r.visits, r.marketing_consent ? "Oui" : "Non", r.banned ? "Banni" : "Actif"].map(csvCell).join(";")));
     const url = URL.createObjectURL(new Blob(["\uFEFF" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" }));
     const a = document.createElement("a"); a.href = url; a.download = `mydeen-inscrits-${format(new Date(), "yyyy-MM-dd")}.csv`; a.click(); URL.revokeObjectURL(url);
   };
@@ -127,16 +145,36 @@ export default function AdminPage() {
           <Button size="sm" variant="outline" onClick={exportCsv} disabled={!rows.length}><Download className="mr-2 h-4 w-4" />Exporter en CSV</Button></CardHeader>
           <CardContent className="space-y-3">
             <div className="relative"><Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" /><Input className="pl-9" placeholder="Rechercher un prénom ou un email" value={search} onChange={(e) => { setSearch(e.target.value); setPage(0); }} /></div>
-            <div className="overflow-x-auto"><Table><TableHeader><TableRow>{head("prenom", "Prénom")}{head("email", "Email")}{head("created_at", "Inscrit le")}{head("last_seen_at", "Dernière connexion")}{head("visits", `Visites (${days} j)`)}{head("marketing_consent", "Emails")}</TableRow></TableHeader>
-              <TableBody>{shown.map((r) => <TableRow key={r.id}><TableCell>{r.prenom || "—"}</TableCell><TableCell>{r.email}</TableCell><TableCell className="whitespace-nowrap">{fmtDate(r.created_at)}</TableCell><TableCell className="whitespace-nowrap">{fmtDate(r.last_seen_at)}</TableCell><TableCell>{r.visits}</TableCell><TableCell>{r.marketing_consent ? "Oui" : "Non"}</TableCell></TableRow>)}
-                {!shown.length && <TableRow><TableCell colSpan={6} className="text-center text-muted-foreground">Aucun résultat.</TableCell></TableRow>}</TableBody></Table></div>
+            <div className="overflow-x-auto"><Table><TableHeader><TableRow>{head("prenom", "Prénom")}{head("email", "Email")}{head("created_at", "Inscrit le")}{head("last_seen_at", "Dernière connexion")}{head("visits", `Visites (${days} j)`)}{head("marketing_consent", "Emails")}<TableHead>Statut</TableHead><TableHead className="text-right">Actions</TableHead></TableRow></TableHeader>
+              <TableBody>{shown.map((r) => <TableRow key={r.id}><TableCell>{r.prenom || "—"}</TableCell><TableCell>{r.email}</TableCell><TableCell className="whitespace-nowrap">{fmtDate(r.created_at)}</TableCell><TableCell className="whitespace-nowrap">{fmtDate(r.last_seen_at)}</TableCell><TableCell>{r.visits}</TableCell><TableCell>{r.marketing_consent ? "Oui" : "Non"}</TableCell><TableCell className="whitespace-nowrap">{r.banned ? <span className="font-medium text-destructive">Banni</span> : "Actif"}</TableCell>
+                <TableCell className="text-right whitespace-nowrap">{r.id !== user?.id && <>
+                  <Button size="sm" variant="ghost" onClick={() => setConfirm({ kind: r.banned ? "unban" : "ban", id: r.id, label: r.email })}>{r.banned ? "Débannir" : "Bannir"}</Button>
+                  <Button size="sm" variant="ghost" className="text-destructive" aria-label={`Supprimer ${r.email}`} onClick={() => setConfirm({ kind: "delete", id: r.id, label: r.email })}><Trash2 className="h-4 w-4" /></Button></>}</TableCell></TableRow>)}
+                {!shown.length && <TableRow><TableCell colSpan={8} className="text-center text-muted-foreground">Aucun résultat.</TableCell></TableRow>}</TableBody></Table></div>
             <div className="flex items-center justify-between text-sm text-muted-foreground">
               <Button size="sm" variant="outline" disabled={page === 0} onClick={() => setPage(page - 1)}>Précédent</Button>
               <span>Page {page + 1} / {pageCount}</span>
               <Button size="sm" variant="outline" disabled={page + 1 >= pageCount} onClick={() => setPage(page + 1)}>Suivant</Button>
             </div>
           </CardContent></Card>
+        <p className="text-xs text-muted-foreground">Les visites des administrateurs ne sont pas comptées dans les statistiques.</p>
       </div>
+      <AlertDialog open={!!confirm} onOpenChange={(o) => { if (!o && !act.isPending) setConfirm(null); }}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{confirm?.kind === "delete" ? "Supprimer ce compte ?" : confirm?.kind === "ban" ? "Bannir ce compte ?" : "Débannir ce compte ?"}</AlertDialogTitle>
+            <AlertDialogDescription>
+              {confirm?.kind === "delete" ? `Le compte ${confirm.label} sera supprimé définitivement, avec son profil et son historique de visites. Cette action est irréversible.`
+                : confirm?.kind === "ban" ? `${confirm.label} ne pourra plus se connecter et ses sessions ouvertes seront fermées. Tu pourras le débannir à tout moment.`
+                : `${confirm?.label} pourra de nouveau se connecter.`}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={act.isPending}>Annuler</AlertDialogCancel>
+            <AlertDialogAction disabled={act.isPending} onClick={(e) => { e.preventDefault(); if (confirm) act.mutate(confirm); }}>{act.isPending ? "En cours…" : "Confirmer"}</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
