@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, useLocation, Outlet } from "react-router-dom";
 import BottomNav from "@/components/BottomNav";
 import PrayerGuide from "./pages/PrayerGuide";
@@ -18,12 +19,16 @@ import ResetPasswordPage from "./pages/ResetPasswordPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import { AuthProvider } from "@/contexts/AuthContext";
 import ProtectedRoute from "@/components/ProtectedRoute";
+import { usePageTracking } from "@/hooks/usePageTracking";
+
+const AdminPage = lazy(() => import("./pages/AdminPage"));
 
 const queryClient = new QueryClient();
 
 const AppLayout = () => {
   const location = useLocation();
   const hideNav = location.pathname === "/installer";
+  usePageTracking();
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -56,6 +61,7 @@ const App = () => (
                 <Route path="/bases" element={<BasicsPage />} />
                 <Route path="/ablutions" element={<AblutionsPage />} />
                 <Route path="/installer" element={<InstallPage />} />
+                <Route path="/admin" element={<Suspense fallback={null}><AdminPage /></Suspense>} />
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Route>
