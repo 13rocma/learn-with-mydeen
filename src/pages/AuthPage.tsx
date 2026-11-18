@@ -14,7 +14,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function AuthPage() {
   const { user, loading, recovering } = useAuth();
   const [params] = useSearchParams();
-  const [mode, setMode] = useState("login");
+  const [mode, setMode] = useState(params.get("mode") === "signup" ? "signup" : "login");
   const [forgot, setForgot] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

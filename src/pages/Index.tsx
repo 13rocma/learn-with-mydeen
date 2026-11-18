@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import { LoaderCircle } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
 import { Hand, Star, BookOpen, Languages, Heart } from "lucide-react";
 import heroBg from "@/assets/hero-calligraphy.png";
 
@@ -36,8 +38,16 @@ const features = [
 ];
 
 const Index = () => {
+  const { user, loading } = useAuth();
+  if (loading) return <div role="status" aria-label="Chargement" className="min-h-screen flex items-center justify-center"><LoaderCircle className="h-6 w-6 animate-spin text-primary" /></div>;
+  // Une fois connecté, la page d'accueil n'existe plus : on entre directement dans l'application.
+  if (user) return <Navigate to="/bases" replace />;
   return (
     <div className="min-h-screen">
+      <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 py-4 max-w-5xl mx-auto">
+        <span className="font-heading text-xl font-bold text-foreground">My<span className="text-primary">Deen</span></span>
+        <Link to="/auth" className="rounded-full border border-primary/50 bg-card/80 px-4 py-2 text-sm font-semibold text-primary backdrop-blur hover:bg-primary hover:text-primary-foreground transition-colors">Connexion</Link>
+      </header>
       {/* Hero */}
       <section className="relative h-[45vh] min-h-[320px] flex items-center justify-center overflow-hidden">
         <img
@@ -57,6 +67,10 @@ const Index = () => {
           <p className="text-lg md:text-xl text-foreground/70 mb-8 animate-fade-in-up-delay font-body">
             Apprenez la prière et les bases de l'islam à votre rythme
           </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link to="/auth?mode=signup" className="rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-lg hover:opacity-90 transition-opacity">Créer un compte gratuit</Link>
+            <Link to="/auth" className="rounded-full border border-primary/50 bg-card/80 px-6 py-3 font-semibold text-primary hover:bg-card transition-colors">Se connecter</Link>
+          </div>
         </div>
       </section>
 
@@ -80,7 +94,7 @@ const Index = () => {
             {features.map((f) => (
               <Link
                 key={f.path}
-                to={f.path}
+                to={`/auth?next=${encodeURIComponent(f.path)}`}
                 className="group rounded-2xl border border-border bg-card p-6 hover:border-primary/40 hover:shadow-[0_0_30px_-10px_hsl(42,90%,50%,0.15)] transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
@@ -108,6 +122,7 @@ const Index = () => {
           <p className="font-arabic text-4xl text-foreground mb-4">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
           <p className="phonetic-text text-lg mb-2">Bismillâhi r-Rahmâni r-Rahîm</p>
           <p className="text-muted-foreground">Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux</p>
+          <Link to="/auth?mode=signup" className="mt-8 inline-block rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground hover:opacity-90 transition-opacity">Commencer maintenant</Link>
         </div>
       </section>
     </div>

@@ -1,12 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Hand, BookOpen, Languages, Star, Heart, Menu, LogOut, Shield, Download } from "lucide-react";
+import { Hand, BookOpen, Languages, Star, Heart, Menu, LogOut, Shield, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 const navItems = [
-  { icon: Home, label: "Accueil", path: "/" },
   { icon: Star, label: "Bases", path: "/bases" },
   { icon: Hand, label: "Prière", path: "/priere" },
   { icon: BookOpen, label: "Sourates", path: "/sourates" },
