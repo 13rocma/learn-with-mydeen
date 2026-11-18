@@ -14,13 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          last_seen_at: string | null
+          marketing_consent: boolean
+          prenom: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id: string
+          last_seen_at?: string | null
+          marketing_consent?: boolean
+          prenom?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          last_seen_at?: string | null
+          marketing_consent?: boolean
+          prenom?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      record_mydeen_login: { Args: never; Returns: undefined }
     }
     Enums: {
       [_ in never]: never

@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1794997213294,
+      "tag": "0000_create_private_profiles",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794997267691,
+      "tag": "0001_record_login_timestamp",
+      "breakpoints": true
+    }
+  ]
+}
