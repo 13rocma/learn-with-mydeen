@@ -10,6 +10,7 @@ export const signupSchema = z.object({
   marketing_consent: z.boolean(),
 });
 export const loginSchema = z.object({ email: emailSchema, password: z.string().min(1, "Saisissez votre mot de passe.").max(128) });
+export const socialRegistrationSchema = signupSchema.pick({ prenom: true, privacy: true, marketing_consent: true });
 export const resetSchema = z.object({ password: passwordSchema, confirmation: z.string() }).refine((v) => v.password === v.confirmation, { message: "Les mots de passe ne correspondent pas.", path: ["confirmation"] });
 
 export function safeDestination(value: string | null | undefined): string {

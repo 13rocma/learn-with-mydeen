@@ -3,9 +3,9 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { MemoryRouter, Route, Routes, useLocation } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 
-const state = vi.hoisted(() => ({ user: null as null | { id: string }, loading: false, recovering: false }));
+const state = vi.hoisted(() => ({ user: null as null | { id: string }, loading: false, recovering: false, registered: true }));
 vi.mock("@/contexts/AuthContext", () => ({ useAuth: () => state }));
-afterEach(() => { cleanup(); state.user = null; state.recovering = false; });
+afterEach(() => { cleanup(); state.user = null; state.recovering = false; state.registered = true; });
 function AuthLocation() { const location = useLocation(); return <p>{location.pathname + location.search}</p>; }
 function guard(path: string) {
   render(<MemoryRouter initialEntries={[path]}><Routes><Route path="/auth" element={<AuthLocation />} /><Route path="/reset-password" element={<p>Recovery</p>} /><Route element={<ProtectedRoute />}><Route path="*" element={<p>Private page</p>} /></Route></Routes></MemoryRouter>);
@@ -17,5 +17,6 @@ describe("private app", () => {
     expect(screen.queryByText("Private page")).not.toBeInTheDocument();
   });
   it("permits a verified account", () => { state.user = { id: "user" }; guard("/priere"); expect(screen.getByText("Private page")).toBeInTheDocument(); });
+  it("requires privacy acceptance after social sign-in", () => { state.user = { id: "user" }; state.registered = false; guard("/priere"); expect(screen.getByText("/auth?next=%2Fpriere")).toBeInTheDocument(); expect(screen.queryByText("Private page")).not.toBeInTheDocument(); });
   it("sends recovery sessions to password reset instead of the app", () => { state.user = { id: "user" }; state.recovering = true; guard("/priere"); expect(screen.getByText("Recovery")).toBeInTheDocument(); });
 });

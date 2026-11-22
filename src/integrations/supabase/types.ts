@@ -14,6 +14,24 @@ export type Database = {
   }
   public: {
     Tables: {
+      consents: {
+        Row: {
+          accepted_at: string
+          terms_version: string
+          user_id: string
+        }
+        Insert: {
+          accepted_at?: string
+          terms_version?: string
+          user_id: string
+        }
+        Update: {
+          accepted_at?: string
+          terms_version?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       page_views: {
         Row: {
           created_at: string
@@ -120,6 +138,10 @@ export type Database = {
       }
       admin_set_ban: {
         Args: { _ban: boolean; _user: string }
+        Returns: undefined
+      }
+      complete_mydeen_registration: {
+        Args: { accepts_marketing: boolean; first_name: string }
         Returns: undefined
       }
       has_role: {

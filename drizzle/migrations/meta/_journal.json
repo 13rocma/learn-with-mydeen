@@ -15,6 +15,13 @@
       "when": 1794997267691,
       "tag": "0001_record_login_timestamp",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795346364102,
+      "tag": "0002_social_registration_consent",
+      "breakpoints": true
     }
   ]
 }

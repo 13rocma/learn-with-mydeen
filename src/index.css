@@ -51,6 +51,11 @@
     --gold-dark: 42 80% 30%;
     --teal: 42 85% 55%;
     --teal-light: 42 40% 94%;
+    --google-button-background: #131314;
+    --google-button-border: #8E918F;
+    --google-button-foreground: #E3E3E3;
+    --apple-button-background: #FFFFFF;
+    --apple-button-foreground: #000000;
   }
 
 }
@@ -68,6 +73,18 @@
 }
 
 @layer components {
+  .google-sign-in, .google-sign-in:hover {
+    background: var(--google-button-background) !important;
+    border-color: var(--google-button-border) !important;
+    color: var(--google-button-foreground) !important;
+  }
+  .apple-sign-in, .apple-sign-in:hover {
+    background: var(--apple-button-background) !important;
+    border-color: var(--apple-button-background) !important;
+    color: var(--apple-button-foreground) !important;
+    font-family: system-ui, sans-serif;
+    font-size: 18.9px;
+  }
   .islamic-pattern {
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }

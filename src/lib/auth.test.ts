@@ -1,8 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { signupSchema, resetSchema, safeDestination, authError } from "./auth";
+import { signupSchema, resetSchema, safeDestination, authError, socialRegistrationSchema } from "./auth";
 
 const account = { prenom: "Amine", email: "amine@example.com", password: "abcdefgh", privacy: true, marketing_consent: false };
 describe("account rules", () => {
+  it("requires privacy acceptance and a first name for social registration, not marketing", () => {
+    expect(socialRegistrationSchema.safeParse({ prenom: "Amine", privacy: true, marketing_consent: false }).success).toBe(true);
+    expect(socialRegistrationSchema.safeParse({ prenom: "Amine", privacy: false, marketing_consent: false }).success).toBe(false);
+    expect(socialRegistrationSchema.safeParse({ prenom: "", privacy: true, marketing_consent: false }).success).toBe(false);
+  });
   it("requires at least eight password characters", () => {
     expect(signupSchema.safeParse({ ...account, password: "abcdefg" }).success).toBe(false);
     expect(signupSchema.safeParse(account).success).toBe(true);
