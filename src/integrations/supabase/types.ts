@@ -93,6 +93,12 @@ export type Database = {
           visits: number
         }[]
       }
+      admin_banned: {
+        Args: never
+        Returns: {
+          uid: string
+        }[]
+      }
       admin_daily: {
         Args: { _days: number }
         Returns: {
@@ -102,6 +108,7 @@ export type Database = {
           visits: number
         }[]
       }
+      admin_delete_user: { Args: { _user: string }; Returns: undefined }
       admin_overview: { Args: never; Returns: Json }
       admin_pages: {
         Args: { _days: number }
@@ -111,6 +118,10 @@ export type Database = {
           visits: number
         }[]
       }
+      admin_set_ban: {
+        Args: { _ban: boolean; _user: string }
+        Returns: undefined
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
@@ -119,6 +130,7 @@ export type Database = {
         Returns: boolean
       }
       record_mydeen_login: { Args: never; Returns: undefined }
+      send_telegram: { Args: { _text: string }; Returns: number }
     }
     Enums: {
       app_role: "admin" | "user"
