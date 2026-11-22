@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, useLocation, Outlet } from "react-router-dom";
 import BottomNav from "@/components/BottomNav";
+import InstallHint from "@/components/InstallHint";
 import PrayerGuide from "./pages/PrayerGuide";
 import SurahsPage from "./pages/SurahsPage";
 import AlphabetPage from "./pages/AlphabetPage";
@@ -35,6 +36,7 @@ const AppLayout = () => {
       <main className={`flex-1 ${hideNav ? "" : "pb-16"}`}>
         <Outlet />
       </main>
+      {!hideNav && !location.pathname.startsWith("/admin") && <InstallHint />}
       {!hideNav && <BottomNav />}
     </div>
   );

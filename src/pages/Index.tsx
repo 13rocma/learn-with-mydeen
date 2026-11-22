@@ -71,6 +71,7 @@ const Index = () => {
             <Link to="/auth?mode=signup" className="rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-lg hover:opacity-90 transition-opacity">Créer un compte gratuit</Link>
             <Link to="/auth" className="rounded-full border border-primary/50 bg-card/80 px-6 py-3 font-semibold text-primary hover:bg-card transition-colors">Se connecter</Link>
           </div>
+          <p className="mt-4 text-sm text-muted-foreground">📲 Astuce : une fois connecté, ouvre le Menu puis « Installer l’application ».</p>
         </div>
       </section>
 
